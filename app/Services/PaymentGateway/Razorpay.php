@@ -69,20 +69,22 @@ class Razorpay
 
     public function completeTransaction($data) {
 
+        $razorpay_payment_id = $this->options['razorpay_payment_id'];
         $node = new class {
             
-        
+            public $razorpay_payment_id;
             public function isSuccessful() { 
                 return true;
             }
 
-            public function getTransactionReference(){
-                return $this->options['razorpay_payment_id'];
+            public function getTransactionReference() {
+                return $this->razorpay_payment_id;
             }
         };
         // dump($this->options);
         // dump("completeTransaction");
         if($this->options['razorpay_payment_link_status']=="paid"){
+            $node->razorpay_payment_id = $razorpay_payment_id;
             return $node;
         }
         dd($data);
