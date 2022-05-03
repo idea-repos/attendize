@@ -16,7 +16,7 @@
 </section>
 
 @include('Public.ViewEvent.Partials.EventCreateOrderSection')
-@php
+<!-- @php
 use Razorpay\Api\Api;
 $api_key = "rzp_test_T9UtxZ8dbDcv3K";
 $api_secret = "F8saAdKU1R3YbSnOHcYQS2fb";
@@ -29,8 +29,8 @@ $link = $api->paymentLink->create(array('amount'=>500, 'currency'=>'INR', 'accep
 'callback_method'=>'get'));
 dump($link);
 dump($link->short_url);
-@endphp
+@endphp -->
 <script>var OrderExpires = {{strtotime($expires)}};</script>
    
-@endcontent
+@endsection
 
