@@ -46,9 +46,19 @@ class Razorpay
         return $this->transaction_data;
     }
 
-    public function extractRequestParameters($request) {}
+    public function extractRequestParameters($request)
+    {
+        foreach ($this->extra_params as $param) {
+            if (!empty($request->get($param))) {
+                $this->options[$param] = $request->get($param);
+            }
+        }
+    }
 
-    public function completeTransaction($data) {}
+    public function completeTransaction($data) {
+        dump("completeTransaction");
+        dd($data);
+    }
 
     public function getAdditionalData() {}
 
