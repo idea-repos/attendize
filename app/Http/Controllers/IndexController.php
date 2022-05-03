@@ -89,4 +89,8 @@ class IndexController extends Controller
         return view('web.insider',compact('class'));
     }
 
+    function razorCallback(Request $request){
+        dd($request);
+    }
+
 }

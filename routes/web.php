@@ -701,6 +701,9 @@ Route::group(
     Route::get('/insider',
         [IndexController::class, 'insider']
     )->name('insider');
+    Route::get('/razorCallback',
+        [IndexController::class, 'razorCallback']
+    )->name('razorCallback');
 
 
     Route::get('/community',
