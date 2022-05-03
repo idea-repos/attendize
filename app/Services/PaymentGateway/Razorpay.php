@@ -62,6 +62,7 @@ class Razorpay
                 $this->options[$param] = $request->get($param);
             }
         }
+        dump($this->options);
     }
 
     public function completeTransaction($data) {
