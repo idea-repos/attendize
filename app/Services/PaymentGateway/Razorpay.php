@@ -75,6 +75,10 @@ class Razorpay
             public function isSuccessful() { 
                 return true;
             }
+
+            public function getTransactionReference(){
+                return $this->options['razorpay_payment_id'];
+            }
         };
         // dump($this->options);
         // dump("completeTransaction");
