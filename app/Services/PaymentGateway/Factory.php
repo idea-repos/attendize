@@ -54,6 +54,16 @@ class Factory
 
                 }
 
+            case Razzorpay::GATEWAY_NAME :
+                {
+
+                    $gateway = Omnipay::create($name);
+                    $gateway->initialize($paymentGatewayConfig);
+
+                    return new StripeSCA($gateway, $paymentGatewayConfig);
+
+                }
+
             default :
                 {
                     throw New \Exception('Invalid gateway specified');

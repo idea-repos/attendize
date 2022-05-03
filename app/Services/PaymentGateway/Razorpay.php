@@ -5,7 +5,7 @@ namespace Services\PaymentGateway;
 class Razorpay
 {
 
-    CONST GATEWAY_NAME = 'Razorpay';
+    CONST GATEWAY_NAME = 'Razzorpay';
 
     private $transaction_data;
 
