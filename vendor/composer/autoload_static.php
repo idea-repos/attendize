@@ -238,8 +238,8 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'ZipStream\\' => 
         array (
@@ -423,8 +423,8 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -564,8 +564,8 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         ),
         'Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/php-http/message-factory/src',
-            1 => __DIR__ . '/..' . '/php-http/message/src',
+            0 => __DIR__ . '/..' . '/php-http/message/src',
+            1 => __DIR__ . '/..' . '/php-http/message-factory/src',
         ),
         'Http\\Discovery\\' => 
         array (
@@ -838,6 +838,7 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         'AddAmountsFieldToEventAccessCodes' => __DIR__ . '/../..' . '/database/migrations/2019_02_13_130258_add_amounts_field_to_event_access_codes.php',
         'AddApiKeyUsersTable' => __DIR__ . '/../..' . '/database/migrations/2016_04_13_151256_add_api_key_users_table.php',
         'AddBusinessFieldsToOrder' => __DIR__ . '/../..' . '/database/migrations/2019_04_17_171440_add_business_fields_to_order.php',
+        'AddCategoryToEventTable' => __DIR__ . '/../..' . '/database/migrations/2022_04_19_185950_add_category_to_event_table.php',
         'AddDefaultGateways' => __DIR__ . '/../..' . '/database/migrations/2019_09_04_075835_add_default_gateways.php',
         'AddEventImagePositionToEvents' => __DIR__ . '/../..' . '/database/migrations/2018_12_04_034523_add_event_image_position_to_events.php',
         'AddGatewayIdAccountsTable' => __DIR__ . '/../..' . '/database/migrations/2016_03_16_215709_add_gateway_id_accounts_table.php',
@@ -876,6 +877,7 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\EventAccessCodesController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventAccessCodesController.php',
         'App\\Http\\Controllers\\EventAttendeesController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventAttendeesController.php',
+        'App\\Http\\Controllers\\EventCategoryController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventCategoryController.php',
         'App\\Http\\Controllers\\EventCheckInController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventCheckInController.php',
         'App\\Http\\Controllers\\EventCheckoutController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventCheckoutController.php',
         'App\\Http\\Controllers\\EventController' => __DIR__ . '/../..' . '/app/Http/Controllers/EventController.php',
@@ -894,12 +896,14 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         'App\\Http\\Controllers\\InstallerController' => __DIR__ . '/../..' . '/app/Http/Controllers/InstallerController.php',
         'App\\Http\\Controllers\\ManageAccountController' => __DIR__ . '/../..' . '/app/Http/Controllers/ManageAccountController.php',
         'App\\Http\\Controllers\\MyBaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/MyBaseController.php',
+        'App\\Http\\Controllers\\NewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/NewsController.php',
         'App\\Http\\Controllers\\OrganiserController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrganiserController.php',
         'App\\Http\\Controllers\\OrganiserCustomizeController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrganiserCustomizeController.php',
         'App\\Http\\Controllers\\OrganiserDashboardController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrganiserDashboardController.php',
         'App\\Http\\Controllers\\OrganiserEventsController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrganiserEventsController.php',
         'App\\Http\\Controllers\\OrganiserViewController' => __DIR__ . '/../..' . '/app/Http/Controllers/OrganiserViewController.php',
         'App\\Http\\Controllers\\RemindersController' => __DIR__ . '/../..' . '/app/Http/Controllers/RemindersController.php',
+        'App\\Http\\Controllers\\SubscriptionController' => __DIR__ . '/../..' . '/app/Http/Controllers/SubscriptionController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Controllers\\UserLoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserLoginController.php',
         'App\\Http\\Controllers\\UserLogoutController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserLogoutController.php',
@@ -944,10 +948,12 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         'App\\Models\\DiscountCode' => __DIR__ . '/../..' . '/app/Models/DiscountCode.php',
         'App\\Models\\Event' => __DIR__ . '/../..' . '/app/Models/Event.php',
         'App\\Models\\EventAccessCodes' => __DIR__ . '/../..' . '/app/Models/EventAccessCodes.php',
+        'App\\Models\\EventCategory' => __DIR__ . '/../..' . '/app/Models/EventCategory.php',
         'App\\Models\\EventImage' => __DIR__ . '/../..' . '/app/Models/EventImage.php',
         'App\\Models\\EventStats' => __DIR__ . '/../..' . '/app/Models/EventStats.php',
         'App\\Models\\Message' => __DIR__ . '/../..' . '/app/Models/Message.php',
         'App\\Models\\MyBaseModel' => __DIR__ . '/../..' . '/app/Models/MyBaseModel.php',
+        'App\\Models\\News' => __DIR__ . '/../..' . '/app/Models/News.php',
         'App\\Models\\Order' => __DIR__ . '/../..' . '/app/Models/Order.php',
         'App\\Models\\OrderItem' => __DIR__ . '/../..' . '/app/Models/OrderItem.php',
         'App\\Models\\OrderStatus' => __DIR__ . '/../..' . '/app/Models/OrderStatus.php',
@@ -958,6 +964,7 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         'App\\Models\\QuestionOption' => __DIR__ . '/../..' . '/app/Models/QuestionOption.php',
         'App\\Models\\QuestionType' => __DIR__ . '/../..' . '/app/Models/QuestionType.php',
         'App\\Models\\ReservedTickets' => __DIR__ . '/../..' . '/app/Models/ReservedTickets.php',
+        'App\\Models\\Subscription' => __DIR__ . '/../..' . '/app/Models/Subscription.php',
         'App\\Models\\Ticket' => __DIR__ . '/../..' . '/app/Models/Ticket.php',
         'App\\Models\\TicketStatus' => __DIR__ . '/../..' . '/app/Models/TicketStatus.php',
         'App\\Models\\Timezone' => __DIR__ . '/../..' . '/app/Models/Timezone.php',
@@ -2269,9 +2276,12 @@ class ComposerStaticInite29b6b3cf5bf10e37710acade9d85b2a
         'CountriesSeeder' => __DIR__ . '/../..' . '/database/seeds/CountriesSeeder.php',
         'CreateAttendeesQuestions' => __DIR__ . '/../..' . '/database/migrations/2016_03_26_103318_create_attendees_questions.php',
         'CreateEventAccessCodesTable' => __DIR__ . '/../..' . '/database/migrations/2019_01_14_124052_create_event_access_codes_table.php',
+        'CreateEventCategoriesTable' => __DIR__ . '/../..' . '/database/migrations/2022_04_19_185025_create_event_categories_table.php',
         'CreateFailedJobsTable' => __DIR__ . '/../..' . '/database/migrations/2014_11_17_011806_create_failed_jobs_table.php',
         'CreateGatewaysTable' => __DIR__ . '/../..' . '/database/migrations/2016_03_16_193757_create_gateways_table.php',
+        'CreateNewsTable' => __DIR__ . '/../..' . '/database/migrations/2022_04_19_185001_create_news_table.php',
         'CreatePasswordResetsTable' => __DIR__ . '/../..' . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
+        'CreateSubscriptionsTable' => __DIR__ . '/../..' . '/database/migrations/2022_04_19_184937_create_subscriptions_table.php',
         'CreateTicketEventAccessCodeTable' => __DIR__ . '/../..' . '/database/migrations/2019_01_14_185419_create_ticket_event_access_code_table.php',
         'CreateUsersTable' => __DIR__ . '/../..' . '/database/migrations/2014_03_26_180116_create_users_table.php',
         'Cron\\AbstractField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/AbstractField.php',

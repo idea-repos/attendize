@@ -38,7 +38,7 @@
                     <div class="m-menu">
                         <a href="{{route('home')}}">HOME</a>
                         <a href="{{route('events')}}">CALENDAR</a>
-                        <a href="{{route('home')}}">CONNECT</a>
+                        <a href="{{route('connect')}}">CONNECT</a>
                         <a href="{{route('home')}};">INSIDER</a>
                     </div>
                 </div>

@@ -78,4 +78,9 @@ class IndexController extends Controller
         
     }
 
+    function contact(Request $request)
+    {
+        return view('web.event',compact('class','data'));
+    }
+
 }
