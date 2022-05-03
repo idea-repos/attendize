@@ -12,6 +12,7 @@
         </header>
 </section>
 
+<div class="event-spacer"></div>
 
 <div class="community-outer">
     <div class="wrapper">
