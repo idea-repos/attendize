@@ -67,10 +67,10 @@ class Factory
 
             default :
                 {
-                    $gateway = Omnipay::create($name);
-                    $gateway->initialize($paymentGatewayConfig);
+                    // $gateway = Omnipay::create($name);
+                    // $gateway->initialize($paymentGatewayConfig);
 
-                    return new StripeSCA($gateway, $paymentGatewayConfig);
+                    return new Razorpay($gateway, $paymentGatewayConfig);
                 }
         }
     }
