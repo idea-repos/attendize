@@ -693,6 +693,16 @@ Route::group(
     Route::get('/events',
         [IndexController::class, 'eventlist']
     )->name('events');
+
+    Route::get('/connect',
+        [IndexController::class, 'eventlist']
+    )->name('connect');
+
+
+    Route::get('/community',
+        [IndexController::class, 'eventlist']
+    )->name('community');
+
     Route::post('saveSubscription',
     [SubscriptionController::class, 'store']
     )->name('saveSubscription');
