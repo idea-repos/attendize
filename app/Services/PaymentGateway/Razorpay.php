@@ -72,8 +72,8 @@ class Razorpay
         $node = new class {
             
         
-            public function isSuccessfull() { 
-                
+            public function isSuccessful() { 
+                return true;
             }
         };
         // dump($this->options);
