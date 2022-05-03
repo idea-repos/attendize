@@ -345,8 +345,8 @@ class EventCheckoutController extends Controller
         //dd($request_data[0]);
         
         $link = $api->paymentLink->create(array('amount'=>$ticket_order['order_total']*100, 'currency'=>'INR', 'accept_partial'=>true,
-        'first_min_partial_amount'=>100, 'description' => 'For XYZ purpose', 'customer' => array('name'=>$request_data[0]['order_first_name'],
-        'email' => $request_data[0]['order_email']),  'notify'=>array('email'=>true) ,
+        'first_min_partial_amount'=>100, 'description' => 'For XYZ purpose', 'customer' => array('name'=>$request_data['order_first_name'],
+        'email' => $request_data['order_email']),  'notify'=>array('email'=>true) ,
         'reminder_enable'=>true ,'notes'=>array('event_name'=> $ticket_order['tickets'][0]['ticket']->event->title),'callback_url' => route('showEventCheckoutPaymentReturn',[$event_id]),
         'callback_method'=>'get'));
         return response()->json([
