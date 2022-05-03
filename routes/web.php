@@ -695,7 +695,7 @@ Route::group(
     )->name('events');
 
     Route::get('/connect',
-        [IndexController::class, 'eventlist']
+        [IndexController::class, 'contact']
     )->name('connect');
 
 
