@@ -698,6 +698,10 @@ Route::group(
         [IndexController::class, 'contact']
     )->name('connect');
 
+    Route::get('/insider',
+        [IndexController::class, 'insider']
+    )->name('insider');
+
 
     Route::get('/community',
         [IndexController::class, 'eventlist']

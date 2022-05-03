@@ -83,5 +83,10 @@ class IndexController extends Controller
         $class ='white-bg';
         return view('web.contact',compact('class'));
     }
+    function insider(Request $request)
+    {
+        $class ='white-bg';
+        return view('web.insider',compact('class'));
+    }
 
 }
