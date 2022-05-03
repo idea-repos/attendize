@@ -518,7 +518,7 @@ class EventCheckoutController extends Controller
         $payment_gateway_factory = new PaymentGatewayFactory();
         $gateway = $payment_gateway_factory->create($ticket_order['payment_gateway']->name, $payment_gateway_config);
         $gateway->extractRequestParameters($request);
-        $response = $gateway->completeTransaction($ticket_order['transaction_data'][0]);
+        $response = $gateway->completeTransaction($ticket_order);
 
 
         if ($response->isSuccessful()) {
