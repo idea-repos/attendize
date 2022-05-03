@@ -183,7 +183,9 @@ class EventCheckoutController extends Controller
                 'status'  => 'error',
                 'message' => 'No tickets selected.',
             ]);
+        
         }
+        dump($event);
         dd($event->account);
         $activeAccountPaymentGateway = $event->account->getGateway($event->account->payment_gateway_id);
         //if no payment gateway configured and no offline pay, don't go to the next step and show user error
