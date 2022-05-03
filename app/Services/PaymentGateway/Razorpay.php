@@ -11,6 +11,14 @@ class Razorpay
 
     private $gateway;
 
+    public $extra = [
+        "razorpay_payment_id" => null,
+        "razorpay_payment_link_id" => null,
+        "razorpay_payment_link_reference_id" => null,
+        "razorpay_payment_link_status" => null,
+        "razorpay_signature" => null
+    ];
+
     public function __construct()
     {
         // $this->gateway = $gateway;
@@ -48,7 +56,7 @@ class Razorpay
 
     public function extractRequestParameters($request)
     {
-        dd($request->all());
+        
         foreach ($this->extra_params as $param) {
             if (!empty($request->get($param))) {
                 $this->options[$param] = $request->get($param);
