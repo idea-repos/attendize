@@ -523,7 +523,13 @@ class EventCheckoutController extends Controller
 
         if ($response->isSuccessful()) {
             session()->push('ticket_order_' . $event_id . '.transaction_id', $response->getTransactionReference());
-            return $this->completeOrder($event_id, false);
+            try{
+                return $this->completeOrder($event_id, false);
+            }
+            catch (Exception $e){
+                dd($e);
+            }
+            
         } else {
             session()->flash('message', $response->getMessage());
             return response()->redirectToRoute('showEventPayment', [
