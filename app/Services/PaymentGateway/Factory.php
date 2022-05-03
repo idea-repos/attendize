@@ -70,7 +70,7 @@ class Factory
                     // $gateway = Omnipay::create($name);
                     // $gateway->initialize($paymentGatewayConfig);
 
-                    return new Razorpay();
+                    return new \Services\PaymentGateway\Razorpay();
                 }
         }
     }
