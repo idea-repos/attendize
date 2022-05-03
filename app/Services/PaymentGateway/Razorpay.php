@@ -65,6 +65,7 @@ class Razorpay
     }
 
     public function completeTransaction($data) {
+        dump($this->extra_params);
         dump("completeTransaction");
         dd($data);
     }
