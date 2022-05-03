@@ -185,8 +185,8 @@ class EventCheckoutController extends Controller
             ]);
         
         }
-        dump($event);
-        dd($event->account);
+        // dump($event);
+        // dd($event->account);
         $activeAccountPaymentGateway = $event->account->getGateway($event->account->payment_gateway_id);
         //if no payment gateway configured and no offline pay, don't go to the next step and show user error
         if (empty($activeAccountPaymentGateway) && !$event->enable_offline_payments) {
