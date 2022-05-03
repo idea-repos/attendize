@@ -68,8 +68,19 @@ class Razorpay
     }
 
     public function completeTransaction($data) {
+
+        $node = new class {
+            
+        
+            public function isSuccessfull() { 
+                
+            }
+        };
         dump($this->options);
         dump("completeTransaction");
+        if($this->options['razorpay_payment_link_status']=="paid"){
+            return $node;
+        }
         dd($data);
     }
 
