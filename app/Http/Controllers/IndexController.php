@@ -80,7 +80,8 @@ class IndexController extends Controller
 
     function contact(Request $request)
     {
-        return view('web.contact');
+        $class ='white-bg';
+        return view('web.contact',compact('class'));
     }
 
 }
