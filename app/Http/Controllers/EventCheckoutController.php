@@ -519,7 +519,7 @@ class EventCheckoutController extends Controller
         $gateway = $payment_gateway_factory->create($ticket_order['payment_gateway']->name, $payment_gateway_config);
         $gateway->extractRequestParameters($request);
         $response = $gateway->completeTransaction($ticket_order);
-        dd($response);
+        //dd($response);
 
         if ($response->isSuccessful()) {
             session()->push('ticket_order_' . $event_id . '.transaction_id', $response->getTransactionReference());
