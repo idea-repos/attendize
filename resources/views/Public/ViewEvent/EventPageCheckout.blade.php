@@ -18,8 +18,8 @@
 @include('Public.ViewEvent.Partials.EventCreateOrderSection')
 @php
 use Razorpay\Api\Api;
-$apo_key = "rzp_test_T9UtxZ8dbDcv3K";
-$apo_secret = "F8saAdKU1R3YbSnOHcYQS2fb";
+$api_key = "rzp_test_T9UtxZ8dbDcv3K";
+$api_secret = "F8saAdKU1R3YbSnOHcYQS2fb";
 $api = new Api($api_key, $api_secret);
 dump($api);
 $link = $api->paymentLink->create(array('amount'=>500, 'currency'=>'INR', 'accept_partial'=>true,
