@@ -31,7 +31,7 @@ use Omnipay;
 use PDF;
 use PhpSpec\Exception\Exception;
 use Validator;
-use Razorpay\Api\Api;
+
 class EventCheckoutController extends Controller
 {
     /**
@@ -227,24 +227,12 @@ class EventCheckoutController extends Controller
          */
         if ($request->ajax()) {
             
-            $api_key = "rzp_test_T9UtxZ8dbDcv3K";
-            $api_secret = "F8saAdKU1R3YbSnOHcYQS2fb";
-            $api = new Api($api_key, $api_secret);
-            dump($api);
-            $link = $api->paymentLink->create(array('amount'=>500, 'currency'=>'INR', 'accept_partial'=>true,
-            'first_min_partial_amount'=>100, 'description' => 'For XYZ purpose', 'customer' => array('name'=>'Gaurav Kumar',
-            'email' => 'gaurav.kumar@example.com', 'contact'=>'+919999999999'),  'notify'=>array('sms'=>true, 'email'=>true) ,
-            'reminder_enable'=>true ,'notes'=>array('policy_name'=> 'Jeevan Bima'),'callback_url' => route('razorCallback'),
-            'callback_method'=>'get'));
-            dump($link);
-            dump($link->short_url);
             return response()->json([
                 'status'      => 'success',
                 'isEmbedded' => $this->is_embedded,
-                'redirectUrl' => $link->short_url,
-                // 'redirectUrl' => route('showEventCheckout', [
-                //         'event_id'    => $event_id,
-                //     ]) . '#order_form',
+                'redirectUrl' => route('showEventCheckout', [
+                        'event_id'    => $event_id,
+                    ]) . '#order_form',
             ]);
         }
 
