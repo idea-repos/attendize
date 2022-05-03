@@ -31,6 +31,7 @@ use Omnipay;
 use PDF;
 use PhpSpec\Exception\Exception;
 use Validator;
+use Razorpay\Api\Api;
 
 class EventCheckoutController extends Controller
 {
