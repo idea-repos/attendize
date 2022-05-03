@@ -11,16 +11,17 @@ class Razorpay
 
     private $gateway;
     public $options = [];
-    public $extra_params = [
-        "razorpay_payment_id" => null,
-        "razorpay_payment_link_id" => null,
-        "razorpay_payment_link_reference_id" => null,
-        "razorpay_payment_link_status" => null,
-        "razorpay_signature" => null
-    ];
+    public $extra_params = [];
 
     public function __construct()
     {
+        $this->extra_params = [
+            "razorpay_payment_id" => null,
+            "razorpay_payment_link_id" => null,
+            "razorpay_payment_link_reference_id" => null,
+            "razorpay_payment_link_status" => null,
+            "razorpay_signature" => null
+        ];
         // $this->gateway = $gateway;
         // $this->options = [];
     }
