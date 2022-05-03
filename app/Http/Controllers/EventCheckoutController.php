@@ -342,7 +342,7 @@ class EventCheckoutController extends Controller
         $api_key = "rzp_test_T9UtxZ8dbDcv3K";
         $api_secret = "F8saAdKU1R3YbSnOHcYQS2fb";
         $api = new Api($api_key, $api_secret);
-        // dump($ticket_order);
+        dd($ticket_order);
         $link = $api->paymentLink->create(array('amount'=>500, 'currency'=>'INR', 'accept_partial'=>true,
         'first_min_partial_amount'=>100, 'description' => 'For XYZ purpose', 'customer' => array('name'=>'Gaurav Kumar',
         'email' => 'gaurav.kumar@example.com', 'contact'=>'+919999999999'),  'notify'=>array('sms'=>true, 'email'=>true) ,
