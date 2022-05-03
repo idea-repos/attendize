@@ -11,7 +11,7 @@ class Razorpay
 
     private $gateway;
 
-    public $extra = [
+    public $extra_params = [
         "razorpay_payment_id" => null,
         "razorpay_payment_link_id" => null,
         "razorpay_payment_link_reference_id" => null,
