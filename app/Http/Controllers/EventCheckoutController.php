@@ -346,7 +346,7 @@ class EventCheckoutController extends Controller
         $link = $api->paymentLink->create(array('amount'=>500, 'currency'=>'INR', 'accept_partial'=>true,
         'first_min_partial_amount'=>100, 'description' => 'For XYZ purpose', 'customer' => array('name'=>'Gaurav Kumar',
         'email' => 'gaurav.kumar@example.com', 'contact'=>'+919999999999'),  'notify'=>array('sms'=>true, 'email'=>true) ,
-        'reminder_enable'=>true ,'notes'=>array('policy_name'=> 'Jeevan Bima'),'callback_url' => route('razorCallback'),
+        'reminder_enable'=>true ,'notes'=>array('policy_name'=> 'Jeevan Bima'),'callback_url' => route('showEventCheckoutPaymentReturn',[$event_id]),
         'callback_method'=>'get'));
         return response()->json([
             'status'      => 'success',
@@ -508,8 +508,10 @@ class EventCheckoutController extends Controller
     public function showEventCheckoutPaymentReturn(Request $request, $event_id)
     {
 
+        
         $ticket_order = session()->get('ticket_order_' . $event_id);
-
+        dump($ticket_order);
+        dd($request);
         $payment_gateway_config = $ticket_order['account_payment_gateway']->config + [
                 'testMode' => config('attendize.enable_test_payments')];
 
