@@ -55,7 +55,7 @@ class Factory
 
                 }
 
-            case Services\PaymentGateway\Razorpay::class::GATEWAY_NAME :
+            case (Services\PaymentGateway\Razorpay::class)::GATEWAY_NAME :
                 {
 
                     $gateway = Omnipay::create($name);
