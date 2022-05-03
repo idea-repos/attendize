@@ -350,7 +350,7 @@ class EventCheckoutController extends Controller
         'callback_method'=>'get'));
         return response()->json([
             'status'      => 'success',
-            'redirectUrl' => $link
+            'redirectUrl' => $link->short_url
             // 'redirectUrl' => route('showEventPayment', [
             //         'event_id'    => $event_id,
             //         'is_embedded' => $this->is_embedded
