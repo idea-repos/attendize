@@ -11,10 +11,10 @@ class Razorpay
 
     private $gateway;
 
-    public function __construct($gateway)
+    public function __construct()
     {
-        $this->gateway = $gateway;
-        $this->options = [];
+        // $this->gateway = $gateway;
+        // $this->options = [];
     }
 
     private function createTransactionData($order_total, $order_email, $event)
@@ -35,11 +35,11 @@ class Razorpay
     public function startTransaction($order_total, $order_email, $event)
     {
 
-        $this->createTransactionData($order_total, $order_email, $event);
-        $transaction = $this->gateway->purchase($this->transaction_data);
-        $response = $transaction->send();
+        // $this->createTransactionData($order_total, $order_email, $event);
+        // $transaction = $this->gateway->purchase($this->transaction_data);
+        // $response = $transaction->send();
 
-        return $response;
+        // return $response;
     }
 
     public function getTransactionData() {
