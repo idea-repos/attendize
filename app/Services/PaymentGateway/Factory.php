@@ -3,6 +3,7 @@
 namespace Services\PaymentGateway;
 
 use Omnipay\Omnipay;
+use Services\PaymentGateway\Razorpay;
 
 /**
  * The intention of this factory is to create a service that is a wrapper around the relative Omnipay implementation
