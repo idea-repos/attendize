@@ -57,14 +57,14 @@ class Razorpay
 
     public function extractRequestParameters($request)
     {
-        dump($request->all());
-        dump($this->extra_params);
+        // dump($request->all());
+        // dump($this->extra_params);
         foreach ($this->extra_params as $k => $param) {
             if (!empty($request->get($k))) {
                 $this->options[$k] = $request->get($k);
             }
         }
-        dump($this->options);
+        //dump($this->options);
     }
 
     public function completeTransaction($data) {
@@ -76,8 +76,8 @@ class Razorpay
                 
             }
         };
-        dump($this->options);
-        dump("completeTransaction");
+        // dump($this->options);
+        // dump("completeTransaction");
         if($this->options['razorpay_payment_link_status']=="paid"){
             return $node;
         }
