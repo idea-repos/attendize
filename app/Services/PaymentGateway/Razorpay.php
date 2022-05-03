@@ -58,6 +58,7 @@ class Razorpay
     public function extractRequestParameters($request)
     {
         dump($request->all());
+        dump($this);
         foreach ($this->extra_params as $param) {
             if (!empty($request->get($param))) {
                 $this->options[$param] = $request->get($param);
