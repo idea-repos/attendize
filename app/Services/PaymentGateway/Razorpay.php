@@ -59,9 +59,9 @@ class Razorpay
     {
         dump($request->all());
         dump($this->extra_params);
-        foreach ($this->extra_params as $param) {
-            if (!empty($request->get($param))) {
-                $this->options[$param] = $request->get($param);
+        foreach ($this->extra_params as $k => $param) {
+            if (!empty($request->get($k))) {
+                $this->options[$k] = $request->get($k);
             }
         }
         dump($this->options);
