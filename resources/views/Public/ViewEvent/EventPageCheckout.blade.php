@@ -14,7 +14,7 @@
                 </a></div>
         </header>
 </section>
-
+<div class="event-spacer"></div>
 @include('Public.ViewEvent.Partials.EventCreateOrderSection')
 
 <script>var OrderExpires = {{strtotime($expires)}};</script>
