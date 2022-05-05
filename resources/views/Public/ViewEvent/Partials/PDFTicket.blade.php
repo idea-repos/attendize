@@ -53,7 +53,7 @@
     </head>
     <body style="background-color: #FFFFFF; font-family: Arial, Helvetica, sans-serif;">
         <div class="container">
-            @foreach($attendees as $attendee)
+            @foreach($data['attendees'] as $attendee)
                 @if(!$attendee->is_cancelled)
                     <div class="ticket">
 
