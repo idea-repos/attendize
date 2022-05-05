@@ -1,4 +1,21 @@
+@extends('web.template')
+
+@section('content')
+
+<section class="home-banner">
+        <header>
+            <div class="logo"><a href="javascript:;"><img src="{{ url('/') }}/images/logo-black.svg" alt="logo" /></a></div>
+            <div class="trigger trigger-black"><a href="javascript:;">
+                    <span></span>
+                    <span></span>
+                </a></div>
+        </header>
+</section>
+
+<div class="event-spacer"></div>
+
 <section id='order_form' class="container">
+    
     <div class="row">
         <h1 class="section_head">
             @lang("Public_ViewEvent.order_details")
@@ -218,4 +235,7 @@
 @if(session()->get('message'))
     <script>showMessage('{{session()->get('message')}}');</script>
 @endif
+@endsection;
+@section('scripts')
+@endsection;
 
