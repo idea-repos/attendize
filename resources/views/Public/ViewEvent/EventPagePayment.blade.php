@@ -5,8 +5,18 @@
 @stop
 
 @section('content')
-@include('Public.ViewEvent.Partials.EventHeaderSection')
+<section class="home-banner attendize">
+        <header>
+            <div class="logo"><a href="javascript:;"><img src="{{ url('/') }}/images/logo-black.svg" alt="logo" /></a></div>
+            <div class="trigger trigger-black"><a href="javascript:;">
+                    <span></span>
+                    <span></span>
+                </a></div>
+        </header>
+</section>
+<div class="event-spacer"></div>
 @include('Public.ViewEvent.Partials.EventPaymentSection')
-@include('Public.ViewEvent.Partials.EventFooterSection')
+<!-- @include('Public.ViewEvent.Partials.EventFooterSection') -->
 @stop
+
 
