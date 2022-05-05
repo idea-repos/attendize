@@ -1,5 +1,9 @@
 @extends('Public.ViewEvent.Layouts.EventPage')
 
+@section('head')
+
+@stop
+
 @section('content')
 
     @include('Public.ViewEvent.Partials.EventHeaderSection')
