@@ -550,6 +550,7 @@ class EventCheckoutController extends Controller
      */
     public function completeOrder($event_id, $return_json = true)
     {
+        dd(session()->get('ticket_order_' . $event_id));
         DB::beginTransaction();
 
         try {
