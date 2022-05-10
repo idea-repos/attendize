@@ -1228,6 +1228,15 @@
             'reference' => 'ffa80ab953edd85d5b6c004f96181a538aad35a3',
             'dev_requirement' => false,
         ),
+        'razorpay/razorpay' => array(
+            'pretty_version' => 'v2.8.3',
+            'version' => '2.8.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../razorpay/razorpay',
+            'aliases' => array(),
+            'reference' => '1ae60f9142f63cb01e6f9b843dd0a3573976fd40',
+            'dev_requirement' => false,
+        ),
         'react/promise' => array(
             'pretty_version' => 'v2.9.0',
             'version' => '2.9.0.0',
@@ -1242,6 +1251,15 @@
             'replaced' => array(
                 0 => '3.9.6',
             ),
+        ),
+        'rmccue/requests' => array(
+            'pretty_version' => '2.0.2',
+            'version' => '2.0.2.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../rmccue/requests',
+            'aliases' => array(),
+            'reference' => 'b01ce7c91657d604f298751686d7f5eec87b9493',
+            'dev_requirement' => false,
         ),
         'sabberworm/php-css-parser' => array(
             'pretty_version' => '8.4.0',
