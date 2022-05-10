@@ -13,6 +13,7 @@ class CreateOrderOwnerOrdersTable extends Migration
      */
     public function up()
     {
+        Schema::dropIfExists('order_owner_orders');
         Schema::create('order_owner_orders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('order_owner_id');
