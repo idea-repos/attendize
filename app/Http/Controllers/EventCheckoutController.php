@@ -758,7 +758,7 @@ class EventCheckoutController extends Controller
             $orderOwnerOrder->save();
             
         }
-        dd(session()->get('ticket_order_' . $event_id));
+        // dd(session()->get('ticket_order_' . $event_id));
         //forget the order in the session
         session()->forget('ticket_order_' . $event->id);
 
