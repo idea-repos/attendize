@@ -19,7 +19,7 @@ class CreateOrderOwnerOrdersTable extends Migration
             
             $table->foreign('order_owner_id')->references('id')->on('order_owners');
 
-            $table->unsignedBigInteger('order_id');
+            $table->unsignedInteger('order_id');
             $table->foreign('order_id')->references('id')->on('orders');
             $table->timestamps();
         });
