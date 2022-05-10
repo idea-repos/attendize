@@ -18,6 +18,8 @@ use App\Models\PaymentGateway;
 use App\Models\QuestionAnswer;
 use App\Models\ReservedTickets;
 use App\Models\Ticket;
+use App\OrderOwner;
+use App\OrderOwnerOrders;
 use App\Services\Order as OrderService;
 use Services\PaymentGateway\Factory as PaymentGatewayFactory;
 use Carbon\Carbon;
@@ -550,13 +552,14 @@ class EventCheckoutController extends Controller
      */
     public function completeOrder($event_id, $return_json = true)
     {
-        dd(session()->get('ticket_order_' . $event_id));
+        
+        $ticket_order = session()->get('ticket_order_' . $event_id);
         DB::beginTransaction();
 
         try {
 
             $order = new Order();
-            $ticket_order = session()->get('ticket_order_' . $event_id);
+            
 
             $request_data = $ticket_order['request_data'][0];
             $event = Event::findOrFail($ticket_order['event_id']);
@@ -580,6 +583,7 @@ class EventCheckoutController extends Controller
             $order->first_name = sanitise($request_data['order_first_name']);
             $order->last_name = sanitise($request_data['order_last_name']);
             $order->email = sanitise($request_data['order_email']);
+
             $order->order_status_id = isset($request_data['pay_offline']) ? config('attendize.order.awaiting_payment') : config('attendize.order.complete');
             $order->amount = $ticket_order['order_total'];
             $order->booking_fee = $ticket_order['booking_fee'];
@@ -733,6 +737,28 @@ class EventCheckoutController extends Controller
         }
         //save the order to the database
         DB::commit();
+        if(isset($order) && $order->id){
+            $orderOwnerCurser = OrderOwner::where('email',$order->email);
+            if($orderOwnerCurser->count()){
+                $orderOwner = $orderOwnerCurser->first();
+            }
+            else{
+                $orderOwner = new OrderOwner();
+                $orderOwner->first_name = sanitise($request_data['order_first_name']);
+                $orderOwner->last_name = sanitise($request_data['order_last_name']);
+                $orderOwner->email = sanitise($request_data['order_email']);
+                $orderOwner->password = bcrypt('Whyp@sword');
+                $orderOwner->save();
+            }
+            //Link Orders to Order Owner
+
+            $orderOwnerOrder = new OrderOwnerOrders();
+            $orderOwnerOrder->order_owner_id = $orderOwner->id;
+            $orderOwnerOrder->order_id = $order->id;
+            $orderOwnerOrder->save();
+            
+        }
+        dd(session()->get('ticket_order_' . $event_id));
         //forget the order in the session
         session()->forget('ticket_order_' . $event->id);
 
