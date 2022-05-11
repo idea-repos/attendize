@@ -31,6 +31,7 @@
                         <div class="form_field">
 
                             <div class="main_form_field">
+                                @csrf
                                 <input type="email" required name="email" placeholder="EMAIL">
                             </div>
                             <div class="main_form_field">
