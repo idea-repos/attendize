@@ -718,6 +718,9 @@ Route::group(
     Route::get('/user/login',
         [UserController::class, 'login']
     )->name('user.login');
+    Route::get('/user/home',
+        [UserController::class, 'home']
+    )->name('user.home');
     Route::post('/user/login',
         [UserController::class, 'doLogin']
     )->name('user.dologin');
