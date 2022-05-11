@@ -47,7 +47,7 @@ return [
             'hash' => false,
         ],
         'attendee' => [
-            'driver' => 'token',
+            'driver' => 'session',
             'provider' => 'order_owners',
             'hash' => false,
         ],
