@@ -87,7 +87,12 @@ class UserController extends Controller
     }
 
     public function doLogin(Request $request){
-        dd($request->all());
+        // dd($request->all());
+        $email = $request->email;
+        $password = $request->password;
+        if(Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password], true)){
+            dd(auth('attendee')->user());
+        }
     }
 
     public function home(Request $request){
