@@ -87,7 +87,7 @@ class UserController extends Controller
     }
 
     public function doLogin(Request $request){
-
+        dd($request->all());
     }
 
     public function home(Request $request){
