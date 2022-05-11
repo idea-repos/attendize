@@ -93,12 +93,14 @@ class UserController extends Controller
         $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
         
         if($attempt){
-            dd(auth('attendee')->user());
+            return redirect()->route('user.home');
+            // dd(auth('attendee')->user());
         }
     }
 
     public function home(Request $request){
-
+        $class ='white-bg';
+        return view('web.home',compact('class'));
     }
 
     public function doLogout(){
