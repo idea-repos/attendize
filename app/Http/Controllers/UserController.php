@@ -79,4 +79,22 @@ class UserController extends Controller
             'message' => trans("Controllers.successfully_saved_details"),
         ]);
     }
+
+
+    public function login(Request $request){
+        $class ='white-bg';
+        return view('web.login',compact('class'));
+    }
+
+    public function doLogin(Request $request){
+
+    }
+
+    public function home(Request $request){
+
+    }
+
+    public function doLogout(){
+
+    }
 }

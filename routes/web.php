@@ -714,4 +714,12 @@ Route::group(
     [SubscriptionController::class, 'store']
     )->name('saveSubscription');
 
+
+    Route::get('/user/login',
+        [UserController::class, 'login']
+    )->name('user.login');
+    Route::post('/user/login',
+        [UserController::class, 'doLogin']
+    )->name('user.dologin');
+
 });
