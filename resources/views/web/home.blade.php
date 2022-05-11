@@ -26,30 +26,12 @@
             <div class="community-right">
                 <h1>Hey<span>{{auth('attendee')->user()->first_name}}</span> Welcome!</h1>
                 <p>Here you can find the Event Details</p>
-                <form>
-                    <div class="community-form">
-                    <div class="form_field">
-                        <div class="main_form_field">
-                            <input type="text" Nmae="fname" placeholder="NAME">
-                        </div>
-                        <div class="main_form_field">
-                            <input type="email" Nmae="fname" placeholder="EMAIL">
-                        </div>
-                        <div class="main_form_field">
-                            <input type="tel" Nmae="fname" placeholder="PHONE">
-                        </div>
-                    </div>
-                    <div class="form_field">
-                        <h4>MESSAGE</h4>
-                        <div class="main_form_field main_form_field_teaxtarea">
-                        <textarea></textarea>
-                        </div>
-                        <div class="form-field-submit">
-                            <button type="submit"><img src="images/submit-form.png"></button>
-                        </div>
-                    </div>
-                </div>
-                </form>
+                
+                <table>
+                    <tr>
+
+                    </tr>
+                </table>
             </div>
         </div>
     </div>
