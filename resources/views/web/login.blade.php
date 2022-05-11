@@ -26,19 +26,22 @@
             <div class="community-right">
                 <h1>Login</h1>
                 <p>Reach out if you want to collaborate with us, or simply have a chat.</p>
-                <form>
+                <form method="post" action="{{route('user.dologin')}}">
                     <div class="community-form">
-                    <div class="form_field">
+                        <div class="form_field">
 
-                        <div class="main_form_field">
-                            <input type="email" name="email" placeholder="EMAIL">
+                            <div class="main_form_field">
+                                <input type="email" required name="email" placeholder="EMAIL">
+                            </div>
+                            <div class="main_form_field">
+                                <input type="password" required name="password" placeholder="PASSWORD">
+                            </div>
+                            <div class="main_form_field">
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
                         </div>
-                        <div class="main_form_field">
-                            <input type="password" name="password" placeholder="PASSWORD">
-                        </div>
+
                     </div>
-
-                </div>
                 </form>
             </div>
         </div>
