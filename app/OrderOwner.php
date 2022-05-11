@@ -10,6 +10,6 @@ class OrderOwner extends Authenticatable
 {
     //
     public function orders(){
-        return $this->hasMany(CreateOrderOwnerOrdersTable::class);
+        return $this->hasMany(OrderOwnerOrders::class);
     }
 }
