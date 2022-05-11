@@ -91,7 +91,7 @@ class UserController extends Controller
         $email = $request->email;
         $password = $request->password;
         $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
-        dd($attempt);
+        
         if($attempt){
             dd(auth('attendee')->user());
         }
