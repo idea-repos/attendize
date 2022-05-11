@@ -46,6 +46,11 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'attendee' => [
+            'driver' => 'token',
+            'provider' => 'order_owners',
+            'hash' => false,
+        ],
     ],
 
     /*
@@ -69,6 +74,10 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'order_owners' => [
+            'driver' => 'eloquent',
+            'model' => App\OrderOwner::class,
         ],
 
         // 'users' => [
