@@ -24,30 +24,20 @@
                 </div>
             </div>
             <div class="community-right">
-                <h1><span>Join</span> the<br/> community!</h1>
+                <h1>Login</h1>
                 <p>Reach out if you want to collaborate with us, or simply have a chat.</p>
                 <form>
                     <div class="community-form">
                     <div class="form_field">
+
                         <div class="main_form_field">
-                            <input type="text" Nmae="fname" placeholder="NAME">
+                            <input type="email" name="email" placeholder="EMAIL">
                         </div>
                         <div class="main_form_field">
-                            <input type="email" Nmae="fname" placeholder="EMAIL">
-                        </div>
-                        <div class="main_form_field">
-                            <input type="tel" Nmae="fname" placeholder="PHONE">
+                            <input type="password" name="password" placeholder="PASSWORD">
                         </div>
                     </div>
-                    <div class="form_field">
-                        <h4>MESSAGE</h4>
-                        <div class="main_form_field main_form_field_teaxtarea">
-                        <textarea></textarea>
-                        </div>
-                        <div class="form-field-submit">
-                            <button type="submit"><img src="images/submit-form.png"></button>
-                        </div>
-                    </div>
+
                 </div>
                 </form>
             </div>
@@ -59,7 +49,7 @@
 
 
 
-
+<!-- 
 <div class="community-outer">
     <div class="wrapper">
         <div class="community-inner">
@@ -85,7 +75,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 @endsection;
 @section('scripts')
 @endsection;
