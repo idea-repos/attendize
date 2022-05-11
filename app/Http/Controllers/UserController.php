@@ -89,7 +89,7 @@ class UserController extends Controller
     public function doLogin(Request $request){
         // dd($request->all());
         $email = $request->email;
-        $password = bcrypt($request->password);
+        $password = $request->password;
         $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
         dd($attempt);
         if($attempt){
