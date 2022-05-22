@@ -63,7 +63,7 @@
                         Venue
                     </th>
                     <th>
-                        Payment
+                        Ticket(s)
                     </th>
                 </tr>
                 @foreach ($orders as $order)
