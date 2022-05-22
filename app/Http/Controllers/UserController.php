@@ -98,6 +98,24 @@ class UserController extends Controller
         }
     }
 
+
+    public function signup(Request $request){
+        $class ='white-bg';
+        return view('web.signup',compact('class'));
+    }
+
+    public function doSignup(Request $request){
+        // dd($request->all());
+        $email = $request->email;
+        $password = $request->password;
+        $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
+        
+        if($attempt){
+            return redirect()->route('user.home');
+            // dd(auth('attendee')->user());
+        }
+    }
+
     public function home(Request $request){
         $class ='white-bg';
         // dump(auth('attendee')->user());

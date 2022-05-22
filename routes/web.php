@@ -725,4 +725,13 @@ Route::group(
         [UserController::class, 'doLogin']
     )->name('user.dologin');
 
+
+    Route::get('/user/signup',
+        [UserController::class, 'signup']
+    )->name('user.signup');
+
+    Route::post('/user/signup',
+        [UserController::class, 'doSignup']
+    )->name('user.doSignup');
+
 });
