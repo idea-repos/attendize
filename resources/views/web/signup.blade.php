@@ -17,18 +17,14 @@
 
 <div class="event-details">
         <div class="inner-wrapper">
-            <div class="bktoevent"><a href="javascript:;"><img src="{{ url('/') }}/images/calander-arrow.svg">TICKET DETAILS</a></div>
+            <div class="bktoevent"><a href="{{route('user.login')}}"><img src="{{ url('/') }}/images/calander-arrow.svg">PROFILE LOG IN</a></div>
         </div>
 
         <div class="login-form">
             <div class="new_user">
-                <h4>NEW USER?</h4>
-                <div class="c_profile">
-                    <a href="javascript:;" class="c_btn">Create profile</a>
-                </div>
+                <h4>BUYER INFORMATION</h4>
             </div>
             <div class="ex-user">
-                <h4>Registration</h4>
 				
 				
 				     <form method="post" action="{{route('user.dologin')}}">

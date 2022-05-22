@@ -15,11 +15,12 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://kit.fontawesome.com/0ae84d8b4a.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="{{ url('/') }}/css/owl.carousel.min.css" />
-<link rel="stylesheet" href="{{ url('/') }}/css/owl.theme.default.min.css" />
-<link rel="stylesheet" href="{{ url('/') }}/css/fonts.css" />
-<link rel="stylesheet" href="{{ url('/') }}/css/style.css" />
-<link rel="stylesheet" href="{{ url('/') }}/css/responsive.css"/>
+<link rel="stylesheet" href="{{ url('/') }}/css/owl.carousel.min.css?v=<?php echo date("s");?>" />
+<link rel="stylesheet" href="{{ url('/') }}/css/owl.theme.default.min.css?v=<?php echo date("s");?>" />
+<link rel="stylesheet" href="{{ url('/') }}/css/fonts.css?v=<?php echo date("s");?>" />
+<link rel="stylesheet" href="{{ url('/') }}/css/style.css?v=<?php echo date("s");?>" />
+<link rel="stylesheet" href="{{ url('/') }}/css/responsive.css?v=<?php echo date("s");?>"/>
+ <link rel="stylesheet" href="{{ url('/') }}/css/responsive_v.css?v=<?php echo date("s");?>" />
 </head>
 <body class="white-bg">
 

@@ -95,10 +95,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="row"><div class="col-md-12">&nbsp;</div></div>
+               <!-- <div class="row"><div class="col-md-12">&nbsp;</div></div>
                
                 <div class="row"><div class="col-md-12">&nbsp;</div></div>
-                <!--<div class="row hidden" id="business_details">
+                <div class="row hidden" id="business_details">
                     <div class="col-md-12">
                         <div class="form-group">
                             <div class="row">
@@ -162,7 +162,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="ticket_holders_details" >
-                            <h3>@lang("Public_ViewEvent.ticket_holder_information")</h3>
+                            <h3 class="ticket_holders_details_hd">@lang("Public_ViewEvent.ticket_holder_information")</h3>
                             <?php
                                 $total_attendee_increment = 0;
                             ?>
@@ -180,13 +180,13 @@
                                             <div class="col-md-12">
                                                 <div class="form-group f_field">
                                                     {!! Form::label("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.first_name")) !!}
-                                                    {!! Form::text("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'placeholder'=> 'Ticket Holder First Name', 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name form-control"]) !!}
                                                 </div>
                                             </div>
                                             <div class="col-md-12">
                                                 <div class="form-group f_field">
                                                     {!! Form::label("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.last_name")) !!}
-                                                    {!! Form::text("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'placeholder'=> 'Ticket Holder Last Name', 'class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name form-control"]) !!}
                                                 </div>
                                             </div>
                                         </div>
@@ -194,7 +194,7 @@
                                             <div class="col-md-12">
                                                 <div class="form-group f_field">
                                                     {!! Form::label("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.email_address")) !!}
-                                                    {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email form-control"]) !!}
+                                                    {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'placeholder'=> 'Ticket Holder Email', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email form-control"]) !!}
                                                 </div>
                                             </div>
                                             @include('Public.ViewEvent.Partials.AttendeeQuestions', ['ticket' => $ticket['ticket'],'attendee_number' => $total_attendee_increment++])
@@ -221,7 +221,7 @@
             </div>
         </div>
     </div>
-    <img src="https://cdn.attendize.com/lg.png" />
+    <!--img src="https://cdn.attendize.com/lg.png" /-->
 </section>
 </div>
 @if(session()->get('message'))

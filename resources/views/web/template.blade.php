@@ -20,10 +20,10 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/owl.theme.default.min.css" />
     <link rel='stylesheet' href="{{ url('/') }}/css/flatpickr.min.css">
     <link rel="stylesheet" href="{{ url('/') }}/css/events-style.css" />
-    <link rel="stylesheet" href="{{ url('/') }}/css/fonts.css?id=10&enabled=true" />
-    <link rel="stylesheet" href="{{ url('/') }}/css/style.css?id=20&enabled=true" />
-    <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css?id=10&enabled=true" />
-	 <link rel="stylesheet" href="{{ url('/') }}/css/responsive_v.css?id=10&enabled=true" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/fonts.css?v=<?php echo date("s");?>" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/style.css?v=<?php echo date("s");?>" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css?v=<?php echo date("s");?>" />
+	 <link rel="stylesheet" href="{{ url('/') }}/css/responsive_v.css?v=<?php echo date("s");?>" />
    
 </head>
 <body class="{{ $class }}">
@@ -94,7 +94,7 @@
        <div class="copyright">
                 <div class="copy-right1">
                     <!-- <i class="fa fa-copyright" aria-hidden="true"></i> 2022 Studio Ekko -->
-                    <img src="images/cb1.svg">
+                    <img src="{{ url('/') }}/images/cb1.svg">
                 </div>
                 <div class="copy-right2 desktop-only">
                     <ul>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="copy-right3">
                     <!-- made with <img src="images/heart.png" /> By studio Snow Show -->
-                    <img src="images/cb2.svg">
+                    <img src="{{ url('/') }}/images/cb2.svg">
                 </div>
             </div>
     </div>

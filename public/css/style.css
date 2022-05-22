@@ -2381,6 +2381,24 @@ footer{
     text-transform: uppercase;
     padding: 10px 0;
 }
+
+.ticket_holders_details_hd{
+	margin-top:50px;
+}
+
+
+.ticket_holders_details .panel-primary:first-child h3.panel-title{
+		margin-top:0;
+	margin-bottom:0;
+}
+
+.ticket_holders_details .panel-primary h3.panel-title{
+	margin-top:50px;
+	margin-bottom:0;
+	padding-bottom:0;
+}
+
+
 .checkout_create_your-information .f_field label{
 	display:none !important;
 }
@@ -2393,4 +2411,52 @@ footer{
     font-size: 21px;
     color: #000;
     font-family: 'Work Sans', sans-serif;
+}
+
+.checkout_create_your-information input[type="submit"].card-submit{
+	    display: block;
+    width: 100%;
+    font-size: 21px;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    margin: 30px 0;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    background: #D23A3D;
+    border: 1px solid #D23A3D;
+}
+
+#mirror_buyer_info{
+	    display: block;
+    width: 100%;
+    font-size: 21px;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    margin: 30px 0;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    background: #D23A3D;
+    border: 1px solid #D23A3D;
+}
+
+.checkout_create_order-summery table td{
+	font-size: 21px;
+    color: #000;
+    font-family: work sans,sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.checkout_create_order-summery .panel-footer h5{
+	font-size: 21px;
+    color: #000;
+    font-family: work sans,sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.checkout_create_order-summery .help-block{
+		font-size:12px;
 }
