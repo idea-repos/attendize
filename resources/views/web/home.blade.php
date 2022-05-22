@@ -80,7 +80,11 @@
                             {{$order->event->location_state}}&nbsp;
                             {{$order->event->location_post_code}}&nbsp;
                         </td>
-                        <td>{{dump($order->tickets)}}</td>
+                        <td>
+                            @foreach ($order->tickets as $ticket)
+                                <div>{{$ticket->title}}</div>
+                            @endforeach
+                        </td>
                     </tr>
                 @endforeach
             </table>
