@@ -54,18 +54,33 @@
                         Event
                     </th>
                     <th>
-                        Payment Status
+                        Start Date
                     </th>
                     <th>
-                        Date
+                        End Date
+                    </th>
+                    <th>
+                        Venue
+                    </th>
+                    <th>
+                        Payment
                     </th>
                 </tr>
                 @foreach ($orders as $order)
                     <tr>
                         <td>{{$order->id}}</td>
-                        <td>{{dump($order->event)}}</td>
-                        <td>{{$order->id}}</td>
-                        <td>{{$order->id}}</td>
+                        <td>{{$order->event->title}}</td>
+                        <td>{{$order->event->start_date}}</td>
+                        <td>{{$order->event->end_date}}</td>
+                        <td>{{$order->event->venue_name}} &nbsp;
+                            {{$order->event->venue_name_full}}&nbsp;
+                            {{$order->event->location_address}}&nbsp;
+                            {{$order->event->location_address_line_1}}&nbsp;
+                            {{$order->event->location_address_line_2}}&nbsp;
+                            {{$order->event->location_state}}&nbsp;
+                            {{$order->event->location_post_code}}&nbsp;
+                        </td>
+                        <td>{{dump($order->tickets)}}</td>
                     </tr>
                 @endforeach
             </table>
