@@ -45,7 +45,31 @@
 <div class="community-outer">
     <div class="wrapper">
         <div class="community-inner">
-            @dump($orders)
+            <table class="table">
+                <tr>
+                    <th>
+                        Order Id
+                    </th>
+                    <th>
+                        Event
+                    </th>
+                    <th>
+                        Payment Status
+                    </th>
+                    <th>
+                        Date
+                    </th>
+                </tr>
+                @foreach ($orders as $order)
+                    <tr>
+                        <td>{{$order->id}}</td>
+                        <td>{{dump($order->event)}}</td>
+                        <td>{{$order->id}}</td>
+                        <td>{{$order->id}}</td>
+                    </tr>
+                @endforeach
+            </table>
+            {{-- @dump($orders) --}}
         </div>
     </div>
 </div>
