@@ -65,6 +65,9 @@
                     <th>
                         Ticket(s)
                     </th>
+                    <th>
+                        Actions
+                    </th>
                 </tr>
                 @foreach ($orders as $order)
                     <tr>
@@ -84,6 +87,9 @@
                             @foreach ($order->tickets as $ticket)
                                 <div>{{$ticket->title}}</div>
                             @endforeach
+                        </td>
+                        <td>
+                            <a class="btn btn-success" href="{{route('showOrderTickets',[$order->reference])}}">Download Tickets</a>
                         </td>
                     </tr>
                 @endforeach
