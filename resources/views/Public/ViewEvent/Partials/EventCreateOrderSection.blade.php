@@ -1,15 +1,18 @@
+
+
+<div class="mynew-wrapper">
 <section id='order_form' class="container">
     
-    <div class="row">
+    <div class="row checkout_create_hd">
         <h1 class="section_head">
             @lang("Public_ViewEvent.order_details")
         </h1>
     </div>
-    <div class="row">
+    <div class="row" id="checkout_create">
         <div class="col-md-12" style="text-align: center">
             @lang("Public_ViewEvent.below_order_details_header")
         </div>
-        <div class="col-md-4 col-md-push-8">
+        <div class="col-md-12 checkout_create_order-summery">
             <div class="panel">
                 <div class="panel-heading">
                     <h3 class="panel-title">
@@ -57,8 +60,12 @@
                 {!! @trans("Public_ViewEvent.time", ["time"=>"<span id='countdown'></span>"]) !!}
             </div>
         </div>
-        <div class="col-md-8 col-md-pull-4">
-            <div class="event_order_form">
+		
+	
+		
+		
+        <div class="col-md-12  checkout_create_your-information">
+            <div class="event_order_form login-form">
                 {!! Form::open(['url' => route('postValidateOrder', ['event_id' => $event->id ]), 'class' => 'ajax payment-form']) !!}
 
                 {!! Form::hidden('event_id', $event->id) !!}
@@ -67,24 +74,24 @@
 
                 <div class="row">
                     <div class="col-xs-6">
-                        <div class="form-group">
+                        <div class="form-group f_field">
                             {!! Form::label("order_first_name", trans("Public_ViewEvent.first_name")) !!}
-                            {!! Form::text("order_first_name", null, ['required' => 'required', 'class' => 'form-control']) !!}
+                            {!! Form::text("order_first_name", null, ['required' => 'required', 'class' => 'form-control', 'placeholder' => 'First Name']) !!}
                         </div>
                     </div>
                     <div class="col-xs-6">
-                        <div class="form-group">
+                        <div class="form-group f_field">
                             {!! Form::label("order_last_name", trans("Public_ViewEvent.last_name")) !!}
-                            {!! Form::text("order_last_name", null, ['required' => 'required', 'class' => 'form-control']) !!}
+                            {!! Form::text("order_last_name", null, ['required' => 'required', 'class' => 'form-control', 'placeholder' => 'Last Name']) !!}
                         </div>
                     </div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="form-group">
+                        <div class="form-group f_field">
                             {!! Form::label("order_email", trans("Public_ViewEvent.email")) !!}
-                            {!! Form::text("order_email", null, ['required' => 'required', 'class' => 'form-control']) !!}
+                            {!! Form::text("order_email", null, ['required' => 'required', 'class' => 'form-control', 'placeholder' => 'Email']) !!}
                         </div>
                     </div>
                 </div>
@@ -170,14 +177,14 @@
                                     </div>
                                     <div class="panel-body">
                                         <div class="row">
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="form-group f_field">
                                                     {!! Form::label("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.first_name")) !!}
                                                     {!! Form::text("ticket_holder_first_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_first_name.$i.{$ticket['ticket']['id']} ticket_holder_first_name form-control"]) !!}
                                                 </div>
                                             </div>
-                                            <div class="col-md-6">
-                                                <div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="form-group f_field">
                                                     {!! Form::label("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.last_name")) !!}
                                                     {!! Form::text("ticket_holder_last_name[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_last_name.$i.{$ticket['ticket']['id']} ticket_holder_last_name form-control"]) !!}
                                                 </div>
@@ -185,7 +192,7 @@
                                         </div>
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="form-group">
+                                                <div class="form-group f_field">
                                                     {!! Form::label("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", trans("Public_ViewEvent.email_address")) !!}
                                                     {!! Form::text("ticket_holder_email[{$i}][{$ticket['ticket']['id']}]", null, ['required' => 'required', 'class' => "ticket_holder_email.$i.{$ticket['ticket']['id']} ticket_holder_email form-control"]) !!}
                                                 </div>
@@ -216,6 +223,7 @@
     </div>
     <img src="https://cdn.attendize.com/lg.png" />
 </section>
+</div>
 @if(session()->get('message'))
     <script>showMessage('{{session()->get('message')}}');</script>
 @endif

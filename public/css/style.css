@@ -10,6 +10,7 @@ body {
     color: #333333;
     font-size: 16px;
     background-color: #000;
+    overflow-x: hidden;
 }
 
 .wrapper {
@@ -23,7 +24,6 @@ body {
     /* height: 100vh; */
     height:800px;
     overflow: hidden;
-	margin-top:-25px;
 }
 
 .bannervideo video {
@@ -58,25 +58,11 @@ header {
 
 .trigger a span {
     width: 89px;
-    height: 4px;
+    height: 5px;
     margin-bottom: 4px;
     display: block;
     border: 1px solid #D23A3D;
 }
-
-/*.banner-black-hover {
-    position: absolute;
-    top: 0;
-    right: 0%;
-    width: 30%;
-    height: 100%;
-    z-index: 2;
-    background: rgba(0, 0, 0, 0.5);
-	border-left: 1.5px solid #D23A3D;
-}*/
-
-
-
 
 .banner-black-hover {
     position: absolute;
@@ -103,7 +89,6 @@ header {
 .active .bc_1_bl{
     background: rgba(0, 0, 0, 0.5);
 }
-
 
 
 .home-banner-caption {
@@ -171,8 +156,6 @@ header {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-	
-	
 }
 
 .home-cat {
@@ -196,6 +179,7 @@ header {
     font-size: 18px;
     color: #D23A3D;
     text-decoration: none;
+    font-family: 'ZoomProNormalMedium';
 }
 
 /* left navigation start */
@@ -1121,7 +1105,7 @@ header {
 .copyright {
     display: flex;
     justify-content: space-between;
-	  align-items: center;
+    align-items: center;
 }
 
 .copy-right1 {
@@ -1216,7 +1200,7 @@ header {
     background: #fff;
 }
 .white-bg header.darkHeader{
-    background-color:#f8f7f4;
+    background: #f8f7f4;
 }
 .community-inner{
     display: flex;
@@ -2156,4 +2140,257 @@ footer{
     font-size: 21px;
     font-family: 'ZoomProNormalMedium';
     text-decoration: none;
+}
+
+
+.mobile-page-hd h1{
+    color: #D23A3D;
+    font-size: 21px;
+    text-transform: uppercase;
+    font-family: 'ZoomProWideMedium';
+    border-bottom: 1px solid #000;
+    margin-bottom: 2px;
+    padding-bottom: 20px;
+}
+.mobile-page-hd{
+    border-bottom: 1px solid #000;
+    margin-bottom: 30px; 
+    display: none;
+}
+
+.evt-footer{
+    display: none;
+}
+.mobile-only{
+    display: none;
+}
+
+.something-setion2-inner-th{
+    border-radius:50%;
+    overflow: hidden;
+    height:250px;
+}
+.launchpagemain{
+    display: flex;
+}
+
+.launchpageleft{
+    width:60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ec2927;
+    height: 100vh;
+}
+.launchpageleft img{
+    max-width:720px;
+    width:100%;
+    margin:0 auto;
+    padding:50px;
+}
+.launchpageright{
+    width:40%;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    height: 100vh;
+}
+.launchpageright-inner{
+    max-width: 270px;
+    width: 100%;
+    margin: 0 auto;
+}
+.launchpageright-inner h4{
+    color: #ec2829;
+    font-size: 40px;
+    text-transform: uppercase;
+    font-family: 'Work Sans', sans-serif;
+     /* font-family: 'ZoomProWideMedium'; */
+    font-weight: 600;
+}
+.launchpageright-inner p{
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    padding:0 0 5px;
+}
+.launchpageright-inner p.qad{
+    color:#000;
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top:50px;
+}
+.launchpageright-inner a{
+    font-size: 16px;
+    font-family: 'Work Sans', sans-serif;
+    color:#000;
+    text-decoration: none;
+    font-weight: 500;
+}
+.getintouch{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mbc, .mob-slider-evn{
+    display: none;
+}
+
+.ymay-monbile{
+    display: none;
+}
+
+.addeventatc, .addeventatc:hover{
+	background-image:none !important;
+	border:none !important;
+	box-shadow:none !important;
+	background:none !important;
+	font-size: 18px;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+	border-bottom:1px solid #000;
+}
+.addeventatc .addeventatc_icon{
+	background:none !important;
+}
+
+
+.ticket-details-evdetails #tickets.container{
+	width:100% !important;
+	max-width:100% !important;
+	padding:0 !important;
+}
+.ticket-details-evdetails .section_head{
+	    color: #000;
+    font-family: 'ZoomProNormalMedium';
+    font-size: 39px;
+    display: block;
+}
+
+.ticket-details-evdetails .table>:not(caption)>*>*{
+	border-bottom-width:0 !important;
+	vertical-align: middle !important;
+}
+.ticket-details-evdetails .tickets_table_wrap{
+	margin-top:30px;
+}
+.ticket-details-evdetails .table>:not(caption)>*>* {
+    padding: 15px 0 !important;
+
+}
+.ticket-details-evdetails .ticket-title.semibold, .ticket-details-evdetails  .ticket-pricing{
+	font-size: 21px;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.ticket-details-evdetails .ticket-descripton.mb0.text-muted{
+	display:none !important;
+}
+.ticket-details-evdetails select.form-control{
+	background:none !important;
+	-webkit-appearance:auto !important;
+	-moz-appearance: auto !important;
+    appearance: auto !important;
+	box-shadow:none;
+		font-size: 21px;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.ticket-details-evdetails .checkout{
+	border-top:1px solid #ccc;
+	padding-top:20px !important;
+}
+.ticket-details-evdetails .checkout img{
+	display:none !important;
+}
+.ticket-details-evdetails .btn.btn-lg.btn-primary.pull-right{
+	    margin-right: 0 !important;
+    margin-left: auto !important;
+    width: 200px;
+    display: block;
+	font-size: 21px;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    padding: 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    background: #D23A3D;
+    border: 1px solid #D23A3D;
+	border-radius:0 !important;
+}
+.ticket-details-evdetails  td{
+	font-size: 21px;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+	margin:20px 0;
+}
+.ticket-details-evdetails .btn.btn-lg.btn-primary.pull-right:hover{
+	  background: none;
+	  color: #D23A3D;
+}
+
+
+.main-gate{
+	padding:100px 0 150px;
+}
+.mynew-wrapper{
+	max-width: 800px;
+    width: 100%;
+    margin: 50px auto 100px;
+}
+.checkout_create_hd .section_head{
+	font-size: 21px;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-top: 1px solid #D23A3D;
+    padding: 10px 0;
+}
+
+.checkout_create_order-summery .panel-heading .panel-title{
+	display: block;
+    width: 100%;
+    font-size: 21px;
+    color: #fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    margin: 30px 0;
+    padding: 15px 30px;
+    text-align: center;
+    text-decoration: none;
+    background: #D23A3D;
+    border: 1px solid #D23A3D;
+}
+
+
+.checkout_create_your-information .event_order_form h3{
+	font-size: 21px;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 0;
+}
+.checkout_create_your-information .f_field label{
+	display:none !important;
+}
+.checkout_create_your-information .event_order_form input{
+	width: 100%;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border: 1.5px solid #000;
+    background: #F9F7F5;
+    font-size: 21px;
+    color: #000;
+    font-family: 'Work Sans', sans-serif;
 }

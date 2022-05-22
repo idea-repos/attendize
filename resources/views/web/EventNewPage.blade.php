@@ -72,10 +72,14 @@
                 </div>
 
                 <div class="buy-ticket">
+				  <a href="javascript:;"><img src="{{ url('/') }}/images/buy-now.png"> BUY TICKET</a>
+				  
+				    </div>
+					   </div>
                 @include('Public.ViewEvent.Partials.EventTicketsSection')
-                    <a href="javascript:;"><img src="{{ url('/') }}/images/buy-now.png"> BUY TICKET</a>
-                </div>
-            </div>
+                  
+              
+         
 
 
             <div class="youmayknow">

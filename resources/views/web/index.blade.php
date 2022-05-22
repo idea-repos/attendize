@@ -15,10 +15,10 @@
          
 			
 			<ul id="nav-links" class="ready">
-				<li class="anchor"><a class="contact" href="{{route('contact')}}">Contact</a></li>
+				<li class="anchor"><a class="contact" href="#footer">Contact</a></li>
 				<li class="anchor"><a class="space" href="#space">Space</a></li>
-				<li class="anchor"><a class="event" href="{{route('events')}}">Event</a></li>
-				<li class="anchor"><a class="home active" href="{{route('home')}}">Home</a></li>
+				<li class="anchor"><a class="event" href="#event">Event</a></li>
+				<li class="anchor"><a class="home active" href="#home">Home</a></li>
 			</ul>
 			
             <!--video width="320" height="240" muted autoplay loop="true">
@@ -27,7 +27,7 @@
             </video-->
 			
 			
-			<div class="main-video-ekkon">
+			<div class="main-video-ekkon" id="home">
                 <div id="video-ekkon1" class="active">
                     <div class="bc_1_bl"></div>
                     <video width="320" height="240" muted autoplay id="video11">
@@ -148,21 +148,21 @@
 		<div class="event min_lft">
             <div class="event-inner">
                 <div class="event-inner-left">
-                    <img src="{{ url('/') }}/images/event-th1.jpg">
+                    <img src="{{ url('/') }}/images/l1.png">
                 </div>
                 <div class="event-inner-right">
-                    <img src="{{ url('/') }}/images/event-th2.jpg">
+                    <img src="{{ url('/') }}/images/l2.png">
                 </div> 
             </div>
            <div class="event-inner">
 				<div class="event-inner-left">
 					<div class="txt_bx pl-5">
-						<h2><span>FOR</span> freelancers <br><span>& rising</span> businesses</h2>
-						<p>For anyone new to the city, it's a great place<br/> to mingle, make new friends, explore new<br/> skills and find your community. </p>
+						<h2><span>FOR</span> CURIOUS <span>SOULS</span><br/> <span>& rising</span> SEEKERS <span>OF FUN</span></h2>
+						<p>For anyone new to the city, it's a great place<br/> to mingle, make new friends, explore new<br/> skills and find your community.  </p>
 					</div>
 				</div>
                 <div class="event-inner-right">
-                    <img src="{{ url('/') }}/images/event-th3.jpg">
+                    <img src="{{ url('/') }}/images/l3.png">
                 </div>
             </div>
 		   
@@ -176,12 +176,91 @@
             </div>
     
         </div>
+		
+		
+		
+		
+		 <div class="event min_rgt Mobileevent">
+            <div class="event-inner Mobileevent_inner1">
+                <div class="event-inner-left">
+                    <div class="txt_bx">
+                        <h2><span>FOR</span> freelancers <br><span>& rising</span> businesses</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="event-inner Mobileevent_inner2">
+                <div class="event-inner-left">
+                    <img src="{{ url('/') }}/images/event-th1.jpg">
+                </div>
+                <div class="event-inner-left">
+                    <img src="{{ url('/') }}/images/event-th2.jpg">
+                </div>
+            </div>
+            
+            <div class="event-inner Mobileevent_inner3">
+                <div class="event-inner-right">
+                    <div class="arow-down"><a href="javascript:;"><img src="{{ url('/') }}/images/arrow-down.svg" alt="" title="" /></a></div>
+                </div> 
+            </div>
+            <div class="event-inner-left Mobileevent_inner4">
+                <div class="txt_bx pl-5">
+                    <p>For anyone new to the city, it's a great place  to mingle, make new friends, explore new  skills and find your community. </p>
+                </div>
+            </div>
+
+           
+    
+        </div>
+        
+        <div class="event min_rgt Mobileevent2">
+            <div class="event-inner Mobileevent_inner1">
+                <div class="event-inner-left">
+                    <div class="txt_bx">
+                      <h2><span>FOR</span> CURIOUS <span>SOULS</span><br/> <span>& rising</span> SEEKERS <span>OF FUN</span></h2>
+					
+                    </div>
+                </div>
+            </div>
+            <div class="event-inner Mobileevent_inner2">
+                <div class="event-inner-left">
+                    <img src="{{ url('/') }}/images/l1.png">
+                </div>
+                <div class="event-inner-left">
+                    <img src="{{ url('/') }}/images/l2.png">
+                </div>
+            </div>
+            
+            <div class="event-inner Mobileevent_inner3">
+                <div class="event-inner-right">
+                    <div class="arow-down"><a href="javascript:;"><img src="{{ url('/') }}/images/arrow-down.svg" alt="" title="" /></a></div>
+                </div> 
+            </div>
+            <div class="event-inner-left Mobileevent_inner4">
+                <div class="txt_bx pl-5">
+                   	<p>For anyone new to the city, it's a great place to mingle, make new friends, explore new skills and find your community.  </p>
+					
+                </div>
+            </div>
+
+            <div class="event-inner-left Mobileevent_inner4 Mobileevent_inner5">
+                <div class="txt_bx pl-5">
+                    <h4><a href="javascript:;">EVENTS</a></h4>
+                </div>
+            </div>
+    
+        </div>
+		
+		
+		
+		
+		
+		
         </div>
     </section>
 	<!-- EVENT SECTION END -->
 
 
-    <section class="home-event-section">
+    <section class="home-event-section" id="event">
         <div class="wrapper">
             <div class="home-event-main">
                 <div class="home-event1">
@@ -212,13 +291,62 @@
                     <div class="home-event-cat">Fitness</div>
                 </div>
             </div>
+			
+			
+			   <div class="mob-slider-evn">
+                <div class="eventmobile-slider">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="home-event2">
+                            <div class="home-event-th"><img src="{{ url('/') }}/images/home-event1.png"></div>
+                            <div class="home-event-hour">15.10 THURS</div>
+                            <div class="home-event-title"><a href="javascript:;">Aerial Yoga: Introductory Class</a></div>
+                            <div class="home-event-place">FLYING MONKEY AERIAL ARTS</div>
+                            <div class="home-event-cat">Fitness</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="home-event2">
+                            <div class="home-event-th"><img src="{{ url('/') }}/images/home-event1.png"></div>
+                            <div class="home-event-hour">15.10 THURS</div>
+                            <div class="home-event-title"><a href="javascript:;">Aerial Yoga: Introductory Class</a></div>
+                            <div class="home-event-place">FLYING MONKEY AERIAL ARTS</div>
+                            <div class="home-event-cat">Fitness</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="home-event2">
+                            <div class="home-event-th"><img src="{{ url('/') }}/images/home-event1.png"></div>
+                            <div class="home-event-hour">15.10 THURS</div>
+                            <div class="home-event-title"><a href="javascript:;">Aerial Yoga: Introductory Class</a></div>
+                            <div class="home-event-place">FLYING MONKEY AERIAL ARTS</div>
+                            <div class="home-event-cat">Fitness</div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="mbc">
+                <div class="view-all-events">
+                    <a href="javascript:;"><img src="{{ url('/') }}/images/view-event-icon.png">VIEW THE FULL<br/> CALENDAR</a>
+                </div>
+            </div>
+			
+			
+			
         </div>
     </section>
 
 
 
-
-    <section class="afi-section">
+	
+	
+	
+	 <section class="afi-section" id="space">
         <div class="wrapper">
             <div class="afi-section-hd">If staying indoors is not your idea of a day well-spent, <span>come on over to
                     Studio Ekko!</span> <img src="{{ url('/') }}/images/afix-link.png">
@@ -237,7 +365,7 @@
             </div>
             <div class="ab-studio-inner ab-studio-inner2 secv">
                 <div class="ab-studio-inner-left">
-
+                    <img src="{{ url('/') }}/images/ab-home.png">
                 </div>
                 <div class="ab-studio-inner-right">
                     <p>Towards the end of the day, kick your feet up over a <span>sundowner</span> in the lawn - some
@@ -246,7 +374,7 @@
             </div>
             <div class="ab-studio-inner ab-studio-inner3 secv">
                 <div class="ab-studio-inner-left">
-
+                    <img src="{{ url('/') }}/images/ab-home.png">
                 </div>
                 <div class="ab-studio-inner-right">
                     <p>Find the <span>stimulus</span> you need to take your personal project forward. </p>
@@ -254,6 +382,7 @@
             </div>
             <div class="ab-studio-inner ab-studio-inner4 secv">
                 <div class="ab-studio-inner-left">
+                    <img src="{{ url('/') }}/images/ab-home.png">
                 </div>
                 <div class="ab-studio-inner-right">
                     <p>
@@ -263,6 +392,9 @@
             </div>
         </div>
     </section>
+	
+	
+	
 
 
 
@@ -274,8 +406,8 @@
             <div class="ekkon-video-inner">
                 <div class="ekkon-video-border">
                     <video width="320" height="240" muted autoplay loop="true">
-                        <source src="{{ url('/') }}/images/video.mp4" type="video/mp4">
-                        <source src="{{ url('/') }}/images/video.mp4" type="video/ogg">
+                        <source src="{{ url('/') }}/images/my-video2.mp4" type="video/mp4">
+                        <source src="{{ url('/') }}/images/my-video2.mp4" type="video/ogg">
                     </video>
                 </div>
             </div>
@@ -296,7 +428,7 @@
             </div>
         </div>
         <div class="main-gate">
-            <img src="{{ url('/') }}/images/theator.svg">
+            <img src="{{ url('/') }}/images/Ekko-Experience.png">
         </div>
     </section>
 
@@ -321,7 +453,8 @@
 
         <section class="comparisonSection">
             <div class="comparisonImage beforeImage">
-              <img src="{{ url('/') }}/images/white-gate.png" alt="before">
+              <!--img src="{{ url('/') }}/images/white-gate.png" alt="before"-->
+			  <img src="{{ url('/') }}/images/Doors_1.png" alt="before">
             </div>
             <div class="comparisonImage afterImage">
               <img src="{{ url('/') }}/images/bl-bg.jpg" alt="after">
@@ -346,7 +479,7 @@
             </div>
         </div>
         <div class="main-gate">
-            <img src="{{ url('/') }}/images/gate.png">
+            <img src="{{ url('/') }}/images/gate1.svg">
         </div>
         <div class="gate-read-more">
             <p>Ekko is packed with the potential needed to host both indoor and outdoor events.</p>

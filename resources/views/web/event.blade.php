@@ -1,7 +1,8 @@
 @extends('web.template')
 
 @section('content')
-
+<style>#footer{display:none !important;}
+</style>
 <section class="home-banner">
         <header>
             <div class="logo"><a href="javascript:;"><img src="{{ url('/') }}/images/logo-black.svg" alt="logo" /></a></div>
@@ -16,6 +17,9 @@
 
 <div id="cdlr">
     <div class="wrap">
+	<div class="mobile-page-hd">
+        <h1>EVENT CALENDAR</h1>
+      </div>
         <div class="block bg-gray">
           <div class="inner">
             <div id="mini-clndr">
@@ -74,6 +78,105 @@
         </div>
     </div>
 </div>
+<div class="ev-footer-menu">
+    <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="event-details.html">CALENDER</a></li>
+        <li><a href="contact.html">CONNECT</a></li>
+    </ul>
+</div>
+<div class="ev-footer">
+    <div class="inner-wrapper">
+    <div class="copyright">
+        <div class="copy-right1">
+            <!-- <i class="fa fa-copyright" aria-hidden="true"></i> 2022 Studio Ekko -->
+            <img src="{{ url('/') }}/images/cw2.svg">
+        </div>
+        <div class="copy-right3">
+            <!-- made with <img src="images/heart.png" /> By studio Snow Show -->
+            <img src="{{ url('/') }}/images/cw1.svg">
+        </div>
+    </div>
+</div>
+</div>
+<footer class="evt-footer">
+  <div class="wrapper">
+    <div class="footer-top-outer">
+        <div class="footer-top">
+            <div class="footer-top-left w40">
+                <div class="subscribe">
+                    <h4>Sign up for updates</h4>
+                    <div class="subscribe-form">
+                        <div class="inputfield">
+                            <input type="text" name="subscribe" placeholder="TYPE YOUR EMAIL HERE">
+                        </div>
+                        <div class="submitbtn">
+                            <button type="submit"><img src="{{ url('/') }}/images/submit-btn1.png"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="address desktop-only">
+                    <div class="address-left">
+                        Global Avenue 2,Mehrauli-<br />Gurgaon Rd, Aya Nagar,<br /> New Delhi, Delhi 110047
+                    </div>
+                    <div class="address-right">
+                        <a href="javascript:;"><img src="{{ url('/') }}/images/address-link.png"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-top-left w40">
+                <div class="getintouch">
+                    <h4>Get in touch or<br /> chat with us</h4>
+                    <div class="address-right">
+                        <a href="javascript:;"><img src="{{ url('/') }}/images/gt.png"></a>
+                    </div>
+                </div>
+                <div class="getintouchemail">
+                    <h4><a href="mailto:info@studioekko.com">info@studioekko.com</a></h4>
+                    <h4><a href="tel:+91 91490 87149">+91 91490 87149</a></h4>
+                </div>
+
+                <div class="address mobile-only">
+                    <div class="address-left">
+                        Global Avenue 2,Mehrauli-<br />Gurgaon Rd, Aya Nagar,<br /> New Delhi, Delhi 110047
+                    </div>
+                    <div class="address-right">
+                        <a href="javascript:;"><img src="{{ url('/') }}/images/address-link.png"></a>
+                    </div>
+                </div> 
+
+
+            </div>
+        </div>
+        <div class="copy-right2 mobile-only">
+            <ul>
+                <li><a href="javascript:;">INSTAGRAM</a></li>
+                <li><a href="javascript:;">FACEBOOK</a></li>
+                <li><a href="javascript:;">LINKEDIN</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <div class="copy-right1">
+            <!-- <i class="fa fa-copyright" aria-hidden="true"></i> 2022 Studio Ekko -->
+            <img src="images/cb1.svg">
+        </div>
+        <div class="copy-right2 desktop-only">
+            <ul>
+                <li><a href="javascript:;">INSTAGRAM</a></li>
+                <li><a href="javascript:;">FACEBOOK</a></li>
+                <li><a href="javascript:;">LINKEDIN</a></li>
+            </ul>
+        </div>
+        <div class="copy-right3">
+            <!-- made with <img src="images/heart.png" /> By studio Snow Show -->
+            <img src="{{ url('/') }}/images/cb2.svg">
+        </div>
+    </div>
+</div>
+</footer>
+
+
 @endsection;
 @section('scripts')
 <script>

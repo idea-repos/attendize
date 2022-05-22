@@ -1,3 +1,5 @@
+<div class="ticket-details-evdetails">
+
 <section id="tickets" class="container">
     <div class="row">
         <h1 class='section_head'>
@@ -153,3 +155,4 @@
     @endif
 
 </section>
+</div>

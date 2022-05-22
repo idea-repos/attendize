@@ -20,9 +20,10 @@
     <link rel="stylesheet" href="{{ url('/') }}/css/owl.theme.default.min.css" />
     <link rel='stylesheet' href="{{ url('/') }}/css/flatpickr.min.css">
     <link rel="stylesheet" href="{{ url('/') }}/css/events-style.css" />
-    <link rel="stylesheet" href="{{ url('/') }}/css/fonts.css" />
-    <link rel="stylesheet" href="{{ url('/') }}/css/style.css" />
-    <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/fonts.css?id=10&enabled=true" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/style.css?id=20&enabled=true" />
+    <link rel="stylesheet" href="{{ url('/') }}/css/responsive.css?id=10&enabled=true" />
+	 <link rel="stylesheet" href="{{ url('/') }}/css/responsive_v.css?id=10&enabled=true" />
    
 </head>
 <body class="{{ $class }}">
@@ -47,7 +48,7 @@
 
 @yield('content')
 
-<footer>
+<footer id="footer">
     <div class="wrapper">
         <div class="footer-top-outer">
             <div class="footer-top">

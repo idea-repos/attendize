@@ -19,6 +19,57 @@ $(function () {
         }
     })
 
+
+    $('.customyoumay .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        dots: false,
+        nav: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                stagePadding: 30,
+            },
+            767: {
+                items: 1,
+                nav: false,
+                stagePadding: 100,
+            },
+            1000: {
+                items: 1,
+                nav: false,
+                loop: false
+            }
+        }
+    })
+
+    $('.eventmobile-slider .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        dots: false,
+        nav: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: false,
+                stagePadding: 30,
+            },
+            767: {
+                items: 1,
+                nav: false,
+                stagePadding: 100,
+            },
+            1000: {
+                items: 1,
+                nav: false,
+                loop: true
+            }
+        }
+    })
+
     $('.browse-by-body .owl-carousel').owlCarousel({
         loop: true,
         margin: 40,
@@ -43,6 +94,13 @@ $(function () {
     })
 
 
+  
+
+   
+
+    
+
+
     $('.trigger').on('click', () =>{
         $('.megamenu').show();
         $('body').css({'overflow':'hidden'})
@@ -57,10 +115,6 @@ $(function () {
         $('.menu_in').slideToggle();
 
     })
-
-
-    
-
 
 
 })
