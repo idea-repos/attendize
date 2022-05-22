@@ -87,7 +87,7 @@
                             @endforeach
                         </td>
                         <td>
-                            <a class="btn btn-success" href="{{route('showOrderTickets',[$order->order_reference])}}">Download Tickets</a>
+                            <a target="_blank" class="btn btn-success" href="{{route('showOrderTickets',[$order->order_reference])}}">View Tickets</a>
                         </td>
                     </tr>
                 @endforeach
