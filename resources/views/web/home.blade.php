@@ -26,10 +26,10 @@
             <div class="community-right">
                 <h1>Hey<span>{{auth('attendee')->user()->first_name}}</span> Welcome!</h1>
                 <p>Here you can find the Event Details</p>
-                
+
                 <table>
                     <tr>
-
+                        <td></td>
                     </tr>
                 </table>
             </div>

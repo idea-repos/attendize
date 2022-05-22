@@ -100,9 +100,9 @@ class UserController extends Controller
 
     public function home(Request $request){
         $class ='white-bg';
-        dump(auth('attendee')->user());
-        dd(auth('attendee')->user()->orders);
-        return view('web.home',compact('class'));
+        // dump(auth('attendee')->user());
+        $orders = auth('attendee')->user()->orders;
+        return view('web.home',compact('class','orders'));
     }
 
     public function doLogout(){
