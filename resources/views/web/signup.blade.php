@@ -45,9 +45,7 @@
                             <div class="f_field">
                                 <input type="password" required name="password" placeholder="PASSWORD">
                             </div>
-							 <div class="f-passwod">
-                            <a href="javascript:;">Forgot Password?</a>
-							</div>
+							
                             <div class="f_field">
                                 <button type="submit" class="btn btn-success c_btn">SIGN IN</button>
                             </div>
