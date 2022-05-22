@@ -45,6 +45,9 @@
 <div class="community-outer">
     <div class="wrapper">
         <div class="community-inner">
+            @if ($orders && $orders->count())
+                
+            
             <table class="table">
                 <tr>
                     <th>
@@ -94,6 +97,9 @@
                     </tr>
                 @endforeach
             </table>
+            @else
+            No record Found
+            @endif
             {{-- @dump($orders) --}}
         </div>
     </div>
