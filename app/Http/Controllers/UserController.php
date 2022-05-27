@@ -175,7 +175,7 @@ class UserController extends Controller
         $validation = Validator::make($request->all(), $rules);
         
         if ($validation->fails()) {
-            dd($validation->errors());
+            
             return redirect()->back();
         }
         $user = OrderOwner::create([
