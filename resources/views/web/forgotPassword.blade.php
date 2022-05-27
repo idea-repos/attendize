@@ -36,7 +36,7 @@
                 <h4>Forgot Password</h4>
 				
 				
-				     <form method="post" action="{{route('user.doForgot')}}">
+				     <form method="post" action="{{route('user.doForgotPassword')}}">
                     <div class="my-form">
 
                             <div class="f_field">
