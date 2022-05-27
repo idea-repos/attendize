@@ -151,7 +151,7 @@ class UserController extends Controller
 
     public function otp(Request $request){
         $class ='white-bg';
-        return view('web.signup',compact('class'));
+        return view('web.otp',compact('class'));
     }
 
     public function doOTP(Request $request){

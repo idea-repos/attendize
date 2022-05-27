@@ -33,7 +33,7 @@
                 </div>
             </div>
             <div class="ex-user">
-                <h4>Forgot {!! Form::password($name, [$options]) !!}</h4>
+                <h4>Validate Identity</h4>
 				
 				
 				     <form method="post" action="{{route('user.doOTP')}}">
