@@ -178,4 +178,6 @@ class UserController extends Controller
         auth('attendee')->logout();
         return redirect('/');
     }
+
+     
 }

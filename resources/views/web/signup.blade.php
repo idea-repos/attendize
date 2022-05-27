@@ -27,23 +27,23 @@
             <div class="ex-user">
 				
 				
-				     <form method="post" action="{{route('user.dologin')}}">
+				     <form method="post" action="{{route('user.doSignup')}}">
                     <div class="my-form">
 
                             <div class="f_field">
                                 @csrf
-                                <input type="text" required name="name" placeholder="Name">
+                                <input type="text" required name="name" placeholder="Name" value="{{old('name')}}">
                             </div>
                             <div class="f_field">
                                 @csrf
-                                <input type="email" required name="email" placeholder="EMAIL">
+                                <input type="email" required name="email" placeholder="EMAIL" value="{{old('email')}}">
                             </div>
                             <div class="f_field">
                                 <input type="password" required name="password" placeholder="PASSWORD">
                             </div>
 							
                             <div class="f_field">
-                                <button type="submit" class="btn btn-success c_btn">SIGN IN</button>
+                                <button type="submit" class="btn btn-success c_btn">SUBMIT</button>
                             </div>
                       
 
