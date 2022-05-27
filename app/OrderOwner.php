@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class OrderOwner extends Authenticatable
 {
+    protected $guarded = ['id'];
     //
     // public function orders(){
     //     return $this->hasMany(OrderOwnerOrders::class);
