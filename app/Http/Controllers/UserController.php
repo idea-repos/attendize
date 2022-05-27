@@ -173,6 +173,9 @@ class UserController extends Controller
             
         ];
         $validation = Validator::make($request->all(), $rules);
+        if ($validation->fails()) {
+            return redirect()->back();
+        }
         $user = OrderOwner::create([
             'first_name'  =>  $name,
             'email'  =>  $email,
