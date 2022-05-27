@@ -25,7 +25,7 @@
                 <h4>BUYER INFORMATION</h4>
             </div>
             <div class="ex-user">
-				
+				@dump($errors)
 				
 				     <form method="post" action="{{route('user.doSignup')}}">
                     <div class="my-form">
