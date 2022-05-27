@@ -168,9 +168,9 @@ class UserController extends Controller
             'new_password'  =>  ['required'],
         ];
         // dd($request->all());
-        $email = $request->email;
+        //$email = $request->email;
         $password = $request->password;
-        $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
+        
         $validation = Validator::make($request->all(), $rules);
         if($validation->passes()){
             OrderOwner::where(['email'=>$email])->update(['password'=>bcrypt($password)]);
