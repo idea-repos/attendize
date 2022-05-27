@@ -118,7 +118,7 @@ class UserController extends Controller
         $attendee = OrderOwner::where(['email'=>$email])->first();
         if($attendee){
             Mail::to($email)->send(new SendOTP($otp));
-            return redirect()->to('user.otp')->with('success','OTP has been sent to registered Email Id.');
+            return redirect()->route('user.otp')->with('success','OTP has been sent to registered Email Id.');
         }
         else{
             return redirect()->back()->with('error','No Record Found with this Email Id.');
