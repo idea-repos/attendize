@@ -179,6 +179,7 @@ class UserController extends Controller
             'password'  =>  bcrypt($password),
         ]);
         if($user){
+            $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => bcrypt($password)]);
             return redirect()->route('user.home');
             // dd(auth('attendee')->user());
         }
