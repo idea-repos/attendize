@@ -101,6 +101,9 @@ class UserController extends Controller
             return redirect()->route('user.home');
             // dd(auth('attendee')->user());
         }
+        else{
+            return redirect()->back()->with('error','Invalid Credentials');
+        }
     }
 
 
