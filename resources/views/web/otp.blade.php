@@ -41,7 +41,15 @@
 
                             <div class="f_field">
                                 @csrf
-                                <input type="otp" required name="otp" placeholder="OTP">
+                                <input type="text" required name="otp" value="{{$otp}}" placeholder="OTP">
+                            </div>
+                            <div class="f_field">
+                                
+                                <input type="text" required name="password"  placeholder="Password">
+                            </div>
+                            <div class="f_field">
+                                
+                                <input type="text" required name="new_password" placeholder="Confirm Password">
                             </div>
                             {{-- <div class="f_field">
                                 <input type="password" required name="password" placeholder="PASSWORD">

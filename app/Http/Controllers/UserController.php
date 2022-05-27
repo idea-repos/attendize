@@ -9,6 +9,7 @@ use App\Rules\Passcheck;
 use Auth;
 use Hash;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use Mail;
 use Validator;
 
@@ -110,13 +111,13 @@ class UserController extends Controller
 
     public function doForgotPassword(Request $request){
         // dd($request->all());
-        $otp = rand(1000,9999);
-        session()->put('otp', $otp);
+        $otp = session()->get('otp');
         $email = $request->email;
         
         $password = $request->password;
         $attendee = OrderOwner::where(['email'=>$email])->first();
         if($attendee){
+            session()->put('email', $email);
             Mail::to($email)->send(new SendOTP($otp));
             return redirect()->route('user.otp')->with('success','OTP has been sent to registered Email Id.');
         }
@@ -150,18 +151,25 @@ class UserController extends Controller
     }
 
     public function otp(Request $request){
+        $otp = rand(1000,9999);
+        session()->put('otp', $otp);
         $class ='white-bg';
-        return view('web.otp',compact('class'));
+        return view('web.otp',compact('class','otp'));
     }
 
     public function doOTP(Request $request){
+        $rules = [
+            'otp'=> [ Rule::in(session()->get('otp'))],
+            'password'  =>  ['required | required_with:new_password |min:6|same:new_password'],
+            'new_password'  =>  ['required'],
+        ];
         // dd($request->all());
         $email = $request->email;
         $password = $request->password;
         $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
-        
-        if($attempt){
-            return redirect()->route('user.home');
+        $validation = Validator::make($request->all(), $rules);
+        if($validation->passes()){
+            return redirect()->route('user.login');
             // dd(auth('attendee')->user());
         }
     }
