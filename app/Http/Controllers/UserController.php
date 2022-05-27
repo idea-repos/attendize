@@ -173,6 +173,7 @@ class UserController extends Controller
             
         ];
         $validation = Validator::make($request->all(), $rules);
+        dd($validation);
         if ($validation->fails()) {
             return redirect()->back();
         }
