@@ -176,7 +176,7 @@ class UserController extends Controller
         
         if ($validation->fails()) {
             
-            return redirect()->back();
+            return redirect()->back()->withErrors($validation)->withInput();;
         }
         $user = OrderOwner::create([
             'first_name'  =>  $name,
