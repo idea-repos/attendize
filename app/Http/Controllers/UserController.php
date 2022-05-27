@@ -178,6 +178,9 @@ class UserController extends Controller
             return redirect()->route('user.login')->with('success','Password has been reset Successfully.');
             // dd(auth('attendee')->user());
         }
+        else{
+            return redirect()->back()->withErrors($validation)->withInput();;
+        }
     }
 
     public function signup(Request $request){
