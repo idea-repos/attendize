@@ -113,6 +113,7 @@ class UserController extends Controller
         $otp = rand(1000,9999);
         session()->put('otp', $otp);
         $email = $request->email;
+        dd($email);
         $password = $request->password;
         $attendee = OrderOwner::where(['email'=>$email])->first();
         if($attendee){
