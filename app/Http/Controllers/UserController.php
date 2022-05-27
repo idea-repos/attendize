@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use App\OrderOwner;
 use App\Rules\Passcheck;
 use Auth;
 use Hash;
@@ -159,11 +161,29 @@ class UserController extends Controller
         // dd($request->all());
         $email = $request->email;
         $password = $request->password;
-        $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
-        
-        if($attempt){
+        $name = $request->name;
+        $rules = [
+            'email'        => [
+                'required',
+                'email',
+                'unique:order_owners,email'
+            ],
+            'password'     => ['required'],
+            'name'   => ['required'],
+            
+        ];
+        $validation = Validator::make($request->all(), $rules);
+        $user = OrderOwner::create([
+            'first_name'  =>  $name,
+            'email'  =>  $email,
+            'password'  =>  bcrypt($password),
+        ]);
+        if($user){
             return redirect()->route('user.home');
             // dd(auth('attendee')->user());
+        }
+        else{
+            return redirect()->back();
         }
     }
 
