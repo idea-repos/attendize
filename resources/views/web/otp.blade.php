@@ -45,11 +45,11 @@
                             </div>
                             <div class="f_field">
                                 
-                                <input type="text" required name="password"  placeholder="Password">
+                                <input type="password" required name="password"  placeholder="Password">
                             </div>
                             <div class="f_field">
                                 
-                                <input type="text" required name="new_password" placeholder="Confirm Password">
+                                <input type="password" required name="new_password" placeholder="Confirm Password">
                             </div>
                             {{-- <div class="f_field">
                                 <input type="password" required name="password" placeholder="PASSWORD">

@@ -158,9 +158,10 @@ class UserController extends Controller
     }
 
     public function doOTP(Request $request){
+        $email = session()->get('email');
         $rules = [
             'otp'=> [ Rule::in(session()->get('otp'))],
-            'password'  =>  ['required | required_with:new_password |min:6|same:new_password'],
+            'password'  =>  ['required|min:6|same:new_password'],
             'new_password'  =>  ['required'],
         ];
         // dd($request->all());
@@ -169,7 +170,9 @@ class UserController extends Controller
         $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
         $validation = Validator::make($request->all(), $rules);
         if($validation->passes()){
-            return redirect()->route('user.login');
+            OrderOwner::where(['email'=>$email])->update(['password'=>bcrypt($password)]);
+
+            return redirect()->route('user.login')->with('success','Password has been reset Successfully.');
             // dd(auth('attendee')->user());
         }
     }
