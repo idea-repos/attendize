@@ -20,10 +20,10 @@
             <div class="bktoevent"><a href="{{route('events')}}"><img src="{{ url('/') }}/images/calander-arrow.svg">TICKET DETAILS</a></div>
         </div>
         @if (Session::has('success'))
-                <div class="alert alert-success">{{Session::has('success')}}</div>
+                <div class="alert alert-success">{{Session::get('success')}}</div>
         @endif
         @if (Session::has('error'))
-                <div class="alert alert-danger">{{Session::has('error')}}</div>
+                <div class="alert alert-danger">{{Session::get('error')}}</div>
         @endif
         <div class="login-form">
             <div class="new_user">
