@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\SendOTP;
 use App\Models\User;
 use App\OrderOwner;
 use App\Rules\Passcheck;
 use Auth;
 use Hash;
 use Illuminate\Http\Request;
+use Mail;
 use Validator;
 
 class UserController extends Controller
@@ -108,14 +110,25 @@ class UserController extends Controller
 
     public function doForgotPassword(Request $request){
         // dd($request->all());
+        $otp = rand(1000,9999);
+        session()->put('otp', $otp);
         $email = $request->email;
         $password = $request->password;
-        $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
-        
-        if($attempt){
-            return redirect()->route('user.home');
-            // dd(auth('attendee')->user());
+        $attendee = OrderOwner::where(['email'=>$email])->first();
+        if($attendee){
+            Mail::to()->send(new SendOTP($otp));
+            return redirect()->to($$email)->with('success','OTP has been sent to registered Email Id.');
         }
+        else{
+            return redirect()->back()->with('error','No Record Found with this Email Id.');
+        }
+        
+        // $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
+        
+        // if($attempt){
+        //     return redirect()->route('user.home');
+        //     // dd(auth('attendee')->user());
+        // }
     }
 
     public function resetPassword(Request $request){
@@ -190,7 +203,7 @@ class UserController extends Controller
             // dd(auth('attendee')->user());
         }
         else{
-            return redirect()->back();
+            return redirect()->route('user.login')->with('success','Registration Completed. Please Do Login.');
         }
     }
 

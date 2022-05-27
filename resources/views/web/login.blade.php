@@ -19,7 +19,12 @@
         <div class="inner-wrapper">
             <div class="bktoevent"><a href="{{route('events')}}"><img src="{{ url('/') }}/images/calander-arrow.svg">TICKET DETAILS</a></div>
         </div>
-
+        @if (Session::has('success'))
+                <div class="alert alert-success">{{Session::has('success')}}</div>
+        @endif
+        @if (Session::has('error'))
+                <div class="alert alert-danger">{{Session::has('error')}}</div>
+        @endif
         <div class="login-form">
             <div class="new_user">
                 <h4>NEW USER?</h4>
@@ -42,7 +47,7 @@
                                 <input type="password" required name="password" placeholder="PASSWORD">
                             </div>
 							 <div class="f-passwod">
-                            <a href="javascript:;">Forgot Password?</a>
+                            <a href="{{route('user.forgotPassword')}}">Forgot Password?</a>
 							</div>
                             <div class="f_field">
                                 <button type="submit" class="btn btn-success c_btn">SIGN IN</button>
