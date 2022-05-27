@@ -161,7 +161,7 @@ class UserController extends Controller
         $email = session()->get('email');
         $rules = [
             'otp'=> [ Rule::in(session()->get('otp'))],
-            'password'  =>  ['required|min:6|same:new_password'],
+            'password'  =>  ['required','min:6','same:new_password'],
             'new_password'  =>  ['required'],
         ];
         // dd($request->all());
