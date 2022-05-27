@@ -99,6 +99,57 @@ class UserController extends Controller
     }
 
 
+    public function forgotPassword(Request $request){
+        $class ='white-bg';
+        return view('web.forgotPassword',compact('class'));
+    }
+
+    public function doForgotPassword(Request $request){
+        // dd($request->all());
+        $email = $request->email;
+        $password = $request->password;
+        $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
+        
+        if($attempt){
+            return redirect()->route('user.home');
+            // dd(auth('attendee')->user());
+        }
+    }
+
+    public function resetPassword(Request $request){
+        $class ='white-bg';
+        return view('web.resetPassword',compact('class'));
+    }
+
+    public function doResetPassword(Request $request){
+        // dd($request->all());
+        $email = $request->email;
+        $password = $request->password;
+        $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
+        
+        if($attempt){
+            return redirect()->route('user.home');
+            // dd(auth('attendee')->user());
+        }
+    }
+
+    public function otp(Request $request){
+        $class ='white-bg';
+        return view('web.signup',compact('class'));
+    }
+
+    public function doOTP(Request $request){
+        // dd($request->all());
+        $email = $request->email;
+        $password = $request->password;
+        $attempt = Auth::guard('attendee')->attempt(['email' => $email, 'password' => $password]);
+        
+        if($attempt){
+            return redirect()->route('user.home');
+            // dd(auth('attendee')->user());
+        }
+    }
+
     public function signup(Request $request){
         $class ='white-bg';
         return view('web.signup',compact('class'));
@@ -124,6 +175,7 @@ class UserController extends Controller
     }
 
     public function doLogout(){
-
+        auth('attendee')->logout();
+        return redirect('/');
     }
 }

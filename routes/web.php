@@ -714,16 +714,41 @@ Route::group(
     [SubscriptionController::class, 'store']
     )->name('saveSubscription');
 
+    Route::get('/user/home',
+        [UserController::class, 'home']
+    )->name('user.home');
 
     Route::get('/user/login',
         [UserController::class, 'login']
     )->name('user.login');
-    Route::get('/user/home',
-        [UserController::class, 'home']
-    )->name('user.home');
+
     Route::post('/user/login',
         [UserController::class, 'doLogin']
     )->name('user.dologin');
+
+    Route::get('/user/forgotPassword',
+        [UserController::class, 'forgotPassword']
+    )->name('user.forgotPassword');
+
+    Route::post('/user/doForgotPassword',
+        [UserController::class, 'doForgotPassword']
+    )->name('user.doForgotPassword');
+
+    Route::get('/user/otp',
+        [UserController::class, 'otp']
+    )->name('user.otp');
+
+    Route::post('/user/doOTP',
+        [UserController::class, 'doOTP']
+    )->name('user.doOTP');
+
+    Route::get('/user/resetPassword',
+        [UserController::class, 'resetPassword']
+    )->name('user.resetPassword');
+
+    Route::post('/user/doResetPassword',
+        [UserController::class, 'doResetPassword']
+    )->name('user.doResetPassword');
 
 
     Route::get('/user/signup',
