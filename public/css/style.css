@@ -11,6 +11,7 @@ body {
     font-size: 16px;
     background-color: #000;
     overflow-x: hidden;
+	margin-top: -20px;
 }
 
 .wrapper {
@@ -2459,4 +2460,13 @@ footer{
 }
 .checkout_create_order-summery .help-block{
 		font-size:12px;
+}
+.padding0{
+	padding-top:0;
+}
+.community-inner1-margin0{
+	margin-bottom:0;
+}
+.paddingbottom0{
+	padding-bottom:0 !important;
 }

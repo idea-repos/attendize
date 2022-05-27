@@ -198,6 +198,40 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-group">
+                                {!! Form::label('AGE Group', trans("Event.age_group"), array('class'=>'control-label')) !!}
+                                {!!  Form::text('age_group', old('age_group'), [
+                                        'class'=>'form-control location_field',
+                                        'placeholder'=>trans("Age Group")
+                                        ])  !!}
+                            </div>
+
+                            <div class="form-group">
+                                {!! Form::label('Event Category', trans("Event.category"), array('class'=>'control-label')) !!}
+                                <select name ="event_category">
+                                    <option name="">Yoga</option> 
+                                    <option name="">Dance</option> 
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                    {!! Form::label('organiser_name', trans("Organiser.organiser_name"), array('class'=>'required control-label ')) !!}
+                                    {!!  Form::text('my_organiser_name', old('organiser_name'),
+                                                array(
+                                                'class'=>'form-control',
+                                                'placeholder'=>trans("Organiser.organiser_name_placeholder")
+                                                ))  !!}
+                                </div>
+                               
+                                <div class="form-group">
+                                    {!! Form::label('organiser_about', trans("Organiser.organiser_description"), array('class'=>'control-label ')) !!}
+                                    {!!  Form::textarea('my_organiser_about', old('organiser_about'),
+                                                array(
+                                                'class'=>'form-control editable2',
+                                                'placeholder'=>trans("Organiser.organiser_description_placeholder"),
+                                                'rows' => 4
+                                                ))  !!}
+                                </div>
                         </div>
                         @endif
 

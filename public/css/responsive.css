@@ -303,6 +303,19 @@
     .mcn{
         display: none;
     }
+	
+	
+	.order-my-cs-table{
+		width:900px;
+		
+	}
+	.order-my-cs-table th{
+		width:150px;
+	}
+	.mytable-order{
+		width:100%;
+		overflow-x:scroll;
+	}
   
 }
 

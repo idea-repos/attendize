@@ -16,11 +16,11 @@
 
 <div class="community-outer">
     <div class="wrapper">
-        <div class="community-inner community-inner1">
+        <div class="community-inner community-inner1 community-inner1-margin0">
             
             <div class="community-right">
                 <h1>Hey<span>{{auth('attendee')->user()->first_name}}</span> Welcome!</h1>
-                <p>Here you can find the Event Details</p>
+                <p class="paddingbottom0">Here you can find the Event Details</p>
 
                 <table>
                     <tr>
@@ -37,13 +37,13 @@
 
 
 
-<div class="community-outer">
+<div class="community-outer padding0">
     <div class="wrapper">
-        <div class="community-inner">
+        <div class="community-inner mytable-order">
             @if ($orders && $orders->count())
                 
             
-            <table class="table">
+            <table class="table order-my-cs-table">
                 <tr>
                     <th>
                         Order Id

@@ -1,7 +1,11 @@
 @extends('web.template')
 
 @section('content')
-
+<style>
+body{
+	background:#fff !important;
+}
+</style>
 <section class="home-banner">
         <header>
             <div class="logo"><a href="javascript:;"><img src="{{ url('/') }}/images/logo-black.svg" alt="logo" /></a></div>
