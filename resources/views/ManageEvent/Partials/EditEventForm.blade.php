@@ -158,7 +158,7 @@
 
                 <div class="form-group">
                     <label class="control-label">Catrgory</label>
-                    {!! Form::styledFile('event_image', 1) !!}
+                    @dump($event)
                  </div>
 
                 @if($event->images->count())
