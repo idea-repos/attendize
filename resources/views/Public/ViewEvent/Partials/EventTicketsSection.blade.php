@@ -45,8 +45,8 @@
                                                     ?>
                                                     <span title='{{money($ticket->price, $event->currency)}} @lang("Public_ViewEvent.ticket_price") + {{money($ticket->total_booking_fee, $event->currency)}} @lang("Public_ViewEvent.booking_fees")'>{{money($ticket->total_price, $event->currency)}} </span>
                                                     <span class="tax-amount text-muted text-smaller">
-                                                        @dump($ticket)
-                                                        @dump($event)
+                                                        @dump($ticket->original_price)
+                                                        
                                                         {{ ($event->organiser->tax_name && $event->organiser->tax_value) ? '(+'.money(($ticket->total_price*($event->organiser->tax_value)/100), $event->currency).' '.$event->organiser->tax_name.')' : '' }}</span>
                                                     <meta property="priceCurrency"
                                                           content="{{ $event->currency->code }}">
