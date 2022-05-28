@@ -208,9 +208,12 @@
 
                             <div class="form-group">
                                 {!! Form::label('Event Category', trans("Event.category"), array('class'=>'control-label')) !!}
-                                <select name ="event_category">
-                                    <option name="">Yoga</option> 
-                                    <option name="">Dance</option> 
+                                <select name ="event_category[]" class="required" multiple>
+                                    <option value=""></option>
+                                    @foreach($category as $key =>$value)
+                                    <option name="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
+                                   
+                                    @endforeach
                                 </select>
                             </div>
 

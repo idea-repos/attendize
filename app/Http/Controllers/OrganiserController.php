@@ -30,7 +30,7 @@ class OrganiserController extends MyBaseController
      */
     public function showCreateOrganiser()
     {
-        $organiser = Organiser::scope()->findOrFail($organiser_id);
+        //$organiser = Organiser::scope()->findOrFail($organiser_id);
         return view('ManageOrganiser.CreateOrganiser');
     }
 

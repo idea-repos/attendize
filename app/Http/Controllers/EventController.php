@@ -10,6 +10,7 @@ use App\Models\Event;
 use App\Models\Organiser;
 use App\Models\EventImage;
 use Illuminate\Http\Request;
+use App\Models\EventCategory;
 use Spatie\GoogleCalendar\Event as GCEvent;
 
 class EventController extends MyBaseController
@@ -25,6 +26,7 @@ class EventController extends MyBaseController
         $data = [
             'modal_id'     => $request->get('modal_id'),
             'organisers'   => Organiser::scope()->pluck('name', 'id'),
+            'category'=>  EventCategory::all(),
             'organiser_id' => $request->get('organiser_id') ? $request->get('organiser_id') : false,
         ];
 
@@ -51,6 +53,11 @@ class EventController extends MyBaseController
         $event->title = $request->get('title');
         $event->description = prepare_markdown($request->get('description'));
         $event->start_date = $request->get('start_date');
+
+        $event->event_category = implode(',',($request->get('event_category')));
+        $event->age_group = $request->get('age_group');
+        $event->my_organiser_name = $request->get('my_organiser_name');
+        $event->my_organiser_about = $request->get('my_organiser_about');
 
         /*
          * Venue location info (Usually auto-filled from google maps)

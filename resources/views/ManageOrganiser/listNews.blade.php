@@ -22,7 +22,17 @@
 
 @section('content')
 <?php #print_R($category->count()); die; ?>
-@section('content')
+
+
+<div class="row">
+    <div class="col-md-9">
+        <div class="btn-toolbar">
+            <div class="btn-group btn-group-responsive">
+                <a href="{{ route('addnews',['organiser_id' => @$organiser->id]) }}" ><i class="ico-plus"></i> Create News</a>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="row">
     <div class="col-md-12">
         @if($category->count())
@@ -81,7 +91,7 @@
         @if(!empty($q))
         @include('Shared.Partials.NoSearchResults')
         @else
-        @include('ManageEvent.Partials.AttendeesBlankSlate')
+       
         @endif
 
         @endif

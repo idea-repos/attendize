@@ -33,6 +33,18 @@
 
                                 </div>
                             </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    {!! Form::label('Orginal price', trans("Orginal price"), array('class'=>'control-label required')) !!}
+                                    {!!  Form::text('original_price', old('original_ticket_price'),
+                                                array(
+                                                'class'=>'form-control',
+                                                'placeholder'=>'Original Price'
+                                                ))  !!}
+
+
+                                </div>
+                            </div>
 
                             <div class="col-sm-6">
                                 <div class="form-group">
