@@ -156,6 +156,11 @@
                    {!! Form::styledFile('event_image', 1) !!}
                 </div>
 
+                <div class="form-group">
+                    <label class="control-label">Catrgory</label>
+                    {!! Form::styledFile('event_image', 1) !!}
+                 </div>
+
                 @if($event->images->count())
                     <div class="form-group">
                         {!! Form::label('event_image_position', trans("Event.event_image_position"), array('class'=>'control-label')) !!}
