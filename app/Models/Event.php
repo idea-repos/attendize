@@ -494,4 +494,8 @@ ICSTemplate;
 
         return $calculatedBookingFee;
     }
+
+    public function categories(){
+        return $this->belongsToMany(Category::class, 'event_id');
+    }
 }
