@@ -158,8 +158,7 @@
                 <div class="form-group">
                     {!! Form::label('Event Category', trans("Event.category"), array('class'=>'control-label')) !!}
                     
-                    @dump($event->category_id)
-                    @dump(explode(',',$event->category_id))
+                    
                     <select name ="event_category[]" class="required" multiple>
                         <option value=""></option>
                         @foreach($categories as $key =>$value)
@@ -175,7 +174,7 @@
                                     @endif
                                 @endforeach
                             @endif
-                            <option @if($selected) selected @endif name="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
+                            <option @if($selected) selected @endif value="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
                             
                        
                         @endforeach

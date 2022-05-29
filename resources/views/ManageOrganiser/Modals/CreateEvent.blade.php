@@ -211,7 +211,7 @@
                                 <select name ="event_category[]" class="required" multiple>
                                     <option value=""></option>
                                     @foreach($category as $key =>$value)
-                                    <option name="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
+                                    <option value="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
                                    
                                     @endforeach
                                 </select>
