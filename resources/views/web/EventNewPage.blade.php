@@ -20,8 +20,8 @@
         <div class="event-details-hd">
             Rishab Rikhiram Sharma
             <span>{{$event->title}} </span>
-            @dump($event->categories()->pluck('title')->toArray())
-            {{-- <span>{{implode(',',$event->categories()->pluck('title'))}} </span> --}}
+            {{-- @dump($event->categories()->pluck('title')->toArray()) --}}
+            <span>{{implode(',',$event->categories()->pluck('title')->toArray())}} </span>
         </div>
         <div class="event-details-date">
         {{ $event->startDateFormatted() }}<br>
