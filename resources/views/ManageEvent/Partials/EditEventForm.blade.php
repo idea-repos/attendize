@@ -181,11 +181,6 @@
                         @endforeach
                     </select>
                 </div>
-                <div class="form-group">
-                    <label class="control-label">Catrgory</label>
-                    
-                    $event->category->id
-                 </div>
 
                 @if($event->images->count())
                     <div class="form-group">
