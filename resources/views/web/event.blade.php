@@ -67,18 +67,15 @@
                 $news = \App\Models\News::all();
             @endphp
             @dump($news)
-            <div class="new-ev-inner">
-                <h4>TIMES OF INDIA</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem neque, pretium eu risus. Porttitor dignissim sollicitudin vitae nibh scelerisque maecenas sem consectetur.</p>
-            </div>
-            <div class="new-ev-inner">
-                <h4>TIMES OF INDIA</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem neque, pretium eu risus. Porttitor dignissim sollicitudin vitae nibh scelerisque maecenas sem consectetur.</p>
-            </div>
-            <div class="new-ev-inner">
-                <h4>TIMES OF INDIA</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem neque, pretium eu risus. Porttitor dignissim sollicitudin vitae nibh scelerisque maecenas sem consectetur.</p>
-            </div>
+            @if ($news)
+                @foreach ($news as $single)
+                    <div class="new-ev-inner">
+                        <h4>{{$single->title}}</h4>
+                        <p>{{$single->descrption}}...<a href="{{$single->url}}">Read More</a></p>
+                    </div>
+                @endforeach
+            @endif
+
         </div>
     </div>
 </div>
