@@ -30,7 +30,7 @@
                                 @isFree($ticket['full_price'])
                                     @lang("Public_ViewEvent.free")
                                 @else
-                                <s>{{ money($ticket['original_price'], $event->currency) }}</s>
+                                <s>{{ money($event->original_price, $event->currency) }}</s>
                                 {{ money($ticket['full_price'], $event->currency) }}
                                 @endif
                             </td>
