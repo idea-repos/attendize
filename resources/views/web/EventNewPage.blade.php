@@ -20,7 +20,7 @@
         <div class="event-details-hd">
             Rishab Rikhiram Sharma
             <span>{{$event->title}} </span>
-            <span>{{$event->categories()}} </span>
+            <span>{{implode(',',$event->categories()->pluck('title'))}} </span>
         </div>
         <div class="event-details-date">
         {{ $event->startDateFormatted() }}<br>
