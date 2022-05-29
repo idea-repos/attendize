@@ -158,7 +158,7 @@
 
                 <div class="form-group">
                     <label class="control-label">Catrgory</label>
-                    @dump($event->categories)
+                    @dump($event->category)
                  </div>
 
                 @if($event->images->count())
