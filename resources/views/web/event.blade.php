@@ -64,7 +64,7 @@
         </div>
         <div class="news-ev">
             @php
-                $news = \App\Models\News::all();
+                $news = \App\Models\News::latest()->take(3)->get();
             @endphp
             
             @if ($news)
