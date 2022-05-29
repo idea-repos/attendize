@@ -66,7 +66,7 @@
             @php
                 $news = \App\Models\News::all();
             @endphp
-            @dump($news)
+            
             @if ($news)
                 @foreach ($news as $single)
                     <div class="new-ev-inner">
