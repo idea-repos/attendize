@@ -157,6 +157,8 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('Event Category', trans("Event.category"), array('class'=>'control-label')) !!}
+                    
+                    @dump($event->category_id)
                     @dump(explode(',',$event->category_id))
                     <select name ="event_category[]" class="required" multiple>
                         <option value=""></option>

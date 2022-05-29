@@ -34,7 +34,7 @@ class EventCustomizeController extends MyBaseController
             'event'      => $event,
             'questions'  => $event->questions()->get(),
             'categories'  => EventCategory::all(),
-            'category'  => $event->category_id?EventCategory::whereIn('id',$event->category_id)->get():null,
+            'category'  => $event->category_id?EventCategory::whereIn('id',explode(',',$event->category_id))->get():null,
             'image_path' => $image_path,
         ], $additional_data);
     }
