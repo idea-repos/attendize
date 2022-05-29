@@ -54,7 +54,7 @@ class EventController extends MyBaseController
         $event->description = prepare_markdown($request->get('description'));
         $event->start_date = $request->get('start_date');
 
-        $event->event_category = implode(',',($request->get('event_category')));
+        $event->category_id = implode(',',($request->get('event_category')));
         $event->age_group = $request->get('age_group');
         $event->my_organiser_name = $request->get('my_organiser_name');
         $event->my_organiser_about = $request->get('my_organiser_about');
@@ -226,7 +226,7 @@ class EventController extends MyBaseController
                 'messages' => $event->errors(),
             ]);
         }
-        dd($request->event_category);
+        
 
         $event->is_live = $request->get('is_live');
         $event->currency_id = $request->get('currency_id');
@@ -234,7 +234,7 @@ class EventController extends MyBaseController
         $event->description = prepare_markdown($request->get('description'));
         $event->start_date = $request->get('start_date');
         $event->google_tag_manager_code = $request->get('google_tag_manager_code');
-        $event->event_category = implode(',',($request->get('event_category')));
+        $event->category_id = implode(',',$request->get('event_category'));
 
         /*
          * If the google place ID is the same as before then don't update the venue
