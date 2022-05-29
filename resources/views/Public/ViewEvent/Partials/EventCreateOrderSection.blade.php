@@ -24,6 +24,7 @@
                 <div class="panel-body pt0">
                     <table class="table mb0 table-condensed">
                         @foreach($tickets as $ticket)
+                        @dump($ticket)
                         <tr>
                             <td class="pl0">{{{$ticket['ticket']['title']}}} X <b>{{$ticket['qty']}}</b></td>
                             <td style="text-align: right;">
