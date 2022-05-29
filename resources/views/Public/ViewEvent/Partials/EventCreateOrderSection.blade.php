@@ -24,14 +24,13 @@
                 <div class="panel-body pt0">
                     <table class="table mb0 table-condensed">
                         @foreach($tickets as $ticket)
-                        @dump($ticket)
                         <tr>
                             <td class="pl0">{{{$ticket['ticket']['title']}}} X <b>{{$ticket['qty']}}</b></td>
                             <td style="text-align: right;">
                                 @isFree($ticket['full_price'])
                                     @lang("Public_ViewEvent.free")
                                 @else
-                                <s>{{ money($event->original_price??$ticket['full_price'], $event->currency) }}</s>
+                                <s>{{ money($ticket->ticket->original_price??$ticket['full_price'], $event->currency) }}</s>
                                 {{ money($ticket['full_price'], $event->currency) }}
                                 @endif
                             </td>
