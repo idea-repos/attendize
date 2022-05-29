@@ -64,7 +64,7 @@
         </div>
         <div class="news-ev">
             @php
-                $news = App/Models/News::all();
+                $news = \App\Models\News::all();
             @endphp
             @dump($news)
             <div class="new-ev-inner">
