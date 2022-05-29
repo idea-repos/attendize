@@ -175,7 +175,7 @@
                                     @endif
                                 @endforeach
                             @endif
-                            <option selected="{{$selected}}" name="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
+                            <option @if($selected) selected @endif name="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
                             
                        
                         @endforeach
