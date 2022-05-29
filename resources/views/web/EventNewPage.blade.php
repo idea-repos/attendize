@@ -19,7 +19,8 @@
         <div class="bktoevent"><a href="{{route('events')}}"><img src="{{ url('/') }}/images/calander-arrow.svg">CALENDAR</a></div>
         <div class="event-details-hd">
             Rishab Rikhiram Sharma
-            <span>{{$event->title}}</span>
+            <span>{{$event->title}} </span>
+            <span>{{$event->categories}} </span>
         </div>
         <div class="event-details-date">
         {{ $event->startDateFormatted() }}<br>

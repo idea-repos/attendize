@@ -498,4 +498,10 @@ ICSTemplate;
     public function category(){
         return $this->belongsTo(EventCategory::class, 'category_id' ,'id');
     }
+
+    public function categories(){
+        
+        return $this->category_id?EventCategory::whereIn('id',explode(',',$this->category_id))->get():null;
+        
+    }
 }
