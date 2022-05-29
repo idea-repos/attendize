@@ -33,6 +33,7 @@ class EventCustomizeController extends MyBaseController
         return array_merge([
             'event'      => $event,
             'questions'  => $event->questions()->get(),
+            'categories'  => EventCategory::all(),
             'category'  => $event->category_id?EventCategory::whereIn('id',$event->category_id)->get():null,
             'image_path' => $image_path,
         ], $additional_data);
