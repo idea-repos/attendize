@@ -496,6 +496,6 @@ ICSTemplate;
     }
 
     public function categories(){
-        return $this->belongsToMany(Category::class, 'event_id');
+        return $this->belongsToMany(Category::class);
     }
 }
