@@ -496,6 +496,6 @@ ICSTemplate;
     }
 
     public function category(){
-        return $this->hasOne(EventCategory::class, 'category_id', 'id');
+        return $this->hasOne(EventCategory::class, 'id', 'category_id');
     }
 }
