@@ -72,14 +72,18 @@
                 </div>
 
                 <div class="buy-ticket">
-				  <a href="javascript:;"><img src="{{ url('/') }}/images/buy-now.png"> BUY TICKET</a>
+				  <a href="javascript:;" class="showdtnew"><img src="{{ url('/') }}/images/buy-now.png"> BUY TICKET</a>
 				  
 				    </div>
 					   </div>
+					   
+				<div class="my-details-ev-new">	   
                 @include('Public.ViewEvent.Partials.EventTicketsSection')
-                  
+                  </div>
               
          
+		 
+		
 
 
             <div class="youmayknow">
@@ -121,3 +125,5 @@
 </div>
 <script type="text/javascript" src="https://cdn.addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 @endsection;
+
+

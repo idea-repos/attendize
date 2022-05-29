@@ -5,8 +5,9 @@
         font-size: 30px;
         text-align: center;
         margin: 0 0 30px;
-        letter-spacing: .2em;
-        font-weight: 200;
+        font-weight: 600;
+		    text-transform: uppercase; 
+		font-family: Roboto, sans-serif;
     }
 
     .order_header {
@@ -34,18 +35,26 @@
 
     .order_details.well, .offline_payment_instructions {
         margin-top: 25px;
-        background-color: #FCFCFC;
         line-height: 30px;
         text-shadow: 0 1px 0 rgba(255,255,255,.9);
         color: #656565;
         overflow: hidden;
+		margin-bottom:100px;
     }
 
     .ticket_download_link {
-        border-bottom: 3px solid;
+       color:#000 !important;
     }
+	.ticket-details-evdetailsnnn .table td{
+		padding-left:20px !important;
+		font-size:16px;
+	}
+	.ticket-details-evdetailsnnn td a{
+		color:#000;
+		text-decoration:none;
+	}
+	.ticket-details-evdetailsnnn-hd{margin-top:50px;}
 </style>
-
 <section id="order_form" class="container">
     <div class="row">
         <div class="col-md-12 order_header">
@@ -147,7 +156,7 @@
                     @lang("Public_ViewEvent.order_items")
                 </h3>
 
-                <div class="table-responsive">
+                <div class="table-responsive ticket-details-evdetails">
                     <table class="table table-hover">
                         <thead>
                             <tr>
@@ -284,11 +293,11 @@
 
                 </div>
 
-                <h3>
+                <h3 class="ticket-details-evdetailsnnn-hd">
                     @lang("Public_ViewEvent.order_attendees")
                 </h3>
 
-                <div class="table-responsive">
+                <div class="table-responsive ticket-details-evdetails ticket-details-evdetailsnnn">
                     <table class="table table-hover table-striped">
                         <tbody>
                             @foreach($order->attendees as $attendee)

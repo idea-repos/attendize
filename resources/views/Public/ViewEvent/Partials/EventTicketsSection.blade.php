@@ -135,8 +135,56 @@
                                                 @endif
                                             </div>
 
+
+
+ <div class="addto-cart-event-details">
+          <div class="ada">
+              <h5>Date</h5>
+              <p>3 January</p>
+          </div>
+          <div class="ada">
+            <h5>Time</h5>
+            <p>3pm-5pm</p>
+        </div>
+        <div class="ada">
+            <h5>Capacity</h5>
+            <p>150-200</p>
+        </div>
+        <div class="ada">
+            <h5>Venue</h5>
+            <p>Studio</p>
+        </div>
+        <div class="ada">
+            <h5>Event type</h5>
+            <p>Live Concert<br>
+                Guided Meditation</p>
+        </div>
+        <div class="ada">
+            <h5>Language</h5>
+            <p>English<br>
+                Hindi</p>
+        </div>
+        <div class="ada">
+            <h5>Age Group</h5>
+            <p>10+</p>
+        </div>
+        <div class="ada">
+            <h5>Age Group</h5>
+            <p>10+</p>
+        </div>
+      </div>
+
+
+
+
+
                                         @endif
-                                        {!!Form::submit(trans("Public_ViewEvent.register"), ['class' => 'btn btn-lg btn-primary pull-right'])!!}
+										<div class="add-tocart-buy-now">
+          <div class="buy-ticket my-ne-buy">
+		 <a href="javascript:;"><img src="{{ url('/') }}/images/buy-now.png" style="display:block !important;"> BUY TICKET</a>
+                                        {!!Form::submit(trans("Public_ViewEvent.register"), ['class' => 'mycsbtn'])!!}
+										</div>
+										</div>
                                     </td>
                                 </tr>
                             </table>
@@ -159,3 +207,4 @@
 
 </section>
 </div>
+

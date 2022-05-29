@@ -87,8 +87,17 @@
                 </div>
             </div>
         </footer>
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
 
+$(function(){
+	$(document).on('click', '.showdtnew', function(){
+	$('.my-details-ev-new').toggle();
+})
 
+})
+
+</script-->
 
 </body>
 </html>

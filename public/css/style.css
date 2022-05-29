@@ -2470,3 +2470,29 @@ footer{
 .paddingbottom0{
 	padding-bottom:0 !important;
 }
+.my-ne-buy{
+	position:relative;
+}
+.my-ne-buy a{ 
+	display:flex;
+	align-items:center;
+}
+.my-ne-buy input[type="submit"]{
+	position: absolute;
+	width:100%;
+	height:100%;
+	z-index:99;
+	top:0;
+	left:0;
+	opacity:0;
+} 
+/*.my-details-ev-new{
+	display:none;
+}*/
+
+.order_details.well, .offline_payment_instructions{
+	background:transparent !important;
+	margin-bottom:100px;
+}
+
+.ticket_download_link{}
