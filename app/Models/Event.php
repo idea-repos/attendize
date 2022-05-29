@@ -496,6 +496,6 @@ ICSTemplate;
     }
 
     public function category(){
-        return $this->belongsTo(EventCategory::class, 'category_ids');
+        return $this->belongsTo(EventCategory::class, 'category_ids' ,'ids');
     }
 }
