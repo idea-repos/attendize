@@ -160,7 +160,20 @@
                     <select name ="event_category[]" class="required" multiple>
                         <option value=""></option>
                         @foreach($categories as $key =>$value)
-                        <option name="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
+                            @php
+                                $selected = false
+                            @endphp
+                            @if ($event->category_id && $event->category_id !='')
+                                @foreach (explode(',',$event->category_id) as $item)
+                                    @if ($item == $value->id)
+                                        @php
+                                            $selected = true
+                                        @endphp
+                                    @endif
+                                @endforeach
+                            @endif
+                            <option selected="{{$selected}}" name="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
+                            
                        
                         @endforeach
                     </select>
