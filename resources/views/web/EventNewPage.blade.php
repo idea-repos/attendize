@@ -21,7 +21,11 @@
             Rishab Rikhiram Sharma
             <span>{{$event->title}} </span>
             {{-- @dump($event->categories()->pluck('title')->toArray()) --}}
-            <span>{{implode(',',$event->categories()->pluck('title')->toArray())}} </span>
+            @if ($event->categories())
+                Category -
+                <span>{{implode(',',$event->categories()->pluck('title')->toArray())}} </span>    
+            @endif
+            
         </div>
         <div class="event-details-date">
         {{ $event->startDateFormatted() }}<br>
