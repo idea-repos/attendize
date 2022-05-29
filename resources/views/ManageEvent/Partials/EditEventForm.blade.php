@@ -155,11 +155,20 @@
                    {!! Form::label('event_image', trans("Event.event_flyer"), array('class'=>'control-label ')) !!}
                    {!! Form::styledFile('event_image', 1) !!}
                 </div>
-
+                <div class="form-group">
+                    {!! Form::label('Event Category', trans("Event.category"), array('class'=>'control-label')) !!}
+                    <select name ="event_category[]" class="required" multiple>
+                        <option value=""></option>
+                        @foreach($category as $key =>$value)
+                        <option name="<?php echo $value->id ;?>"><?php echo $value->title ;?> </option> 
+                       
+                        @endforeach
+                    </select>
+                </div>
                 <div class="form-group">
                     <label class="control-label">Catrgory</label>
-                    @dump($event)
-                    @dump($event->category)
+                    
+                    $event->category->id
                  </div>
 
                 @if($event->images->count())

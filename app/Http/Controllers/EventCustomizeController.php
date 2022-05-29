@@ -6,6 +6,7 @@ use App\Models\Event;
 use File;
 use Illuminate\Http\Request;
 use App\Models\Currency;
+use App\Models\EventCategory;
 use Image;
 use Validator;
 
@@ -32,7 +33,7 @@ class EventCustomizeController extends MyBaseController
         return array_merge([
             'event'      => $event,
             'questions'  => $event->questions()->get(),
-            'category'  => $event->category()->get(),
+            'category'  => EventCategory::In('id',$event->category_id)->get(),
             'image_path' => $image_path,
         ], $additional_data);
     }
