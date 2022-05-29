@@ -226,7 +226,7 @@ class EventController extends MyBaseController
                 'messages' => $event->errors(),
             ]);
         }
-        
+        dd($request->event_category);
 
         $event->is_live = $request->get('is_live');
         $event->currency_id = $request->get('currency_id');
