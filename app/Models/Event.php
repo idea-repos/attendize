@@ -495,7 +495,7 @@ ICSTemplate;
         return $calculatedBookingFee;
     }
 
-    public function categories(){
-        return $this->belongsToMany(EventCategory::class, 'events', 'category_id');
+    public function category(){
+        return $this->hasOne(EventCategory::class, 'category_id');
     }
 }
