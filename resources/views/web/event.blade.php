@@ -79,6 +79,16 @@
         </div>
     </div>
 </div>
+<div class="row">
+    @php
+        $categories = App\Models\EventCategory::all();
+    @endphp
+    <ul>
+        @foreach ($categories as $cat)
+            <li><a href="/events/{{$cat->id}}">{{$cat->title}}</a></li>    
+        @endforeach        
+    </ul>
+</div>
 <div class="ev-footer-menu">
     <ul>
         <li><a href="index.html">HOME</a></li>
