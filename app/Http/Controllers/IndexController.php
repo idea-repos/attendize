@@ -41,7 +41,7 @@ class IndexController extends Controller
                 // dump($cats);
                 return in_array($category, $cats);
             });
-            // dd($events);
+            dd($events);
         }
         $listEvent=[];
        
