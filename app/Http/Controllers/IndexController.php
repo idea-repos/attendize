@@ -37,6 +37,8 @@ class IndexController extends Controller
             dump($events);
             $events = $events->filter(function($event) use($category){
                 $cats = explode(',',$event->event_category);
+                dump($event->event_category);
+                dump($cats);
                 return in_array($category, $cats);
             });
             dd($events);
