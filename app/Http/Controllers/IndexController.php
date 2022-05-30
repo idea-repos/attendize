@@ -19,27 +19,19 @@ class IndexController extends Controller
         return view('web.index',compact('class'));
     }
 
-    public function eventlist(Request $request, $category=0)
+    public function eventlist(Request $request)
     {
         $class ='white-bg';
        
         $allowed_sorts = ['created_at', 'start_date', 'end_date', 'title'];
         $currentdate = date('Y-m-d');
         $searchQuery = $request->get('q');
-        
         $sort_by = (in_array($request->get('sort_by'), $allowed_sorts) ? $request->get('sort_by') : 'start_date');
 
         $events = $searchQuery
             ? Event::with(['organiser','images', 'currency'])->where('end_date', '>', $currentdate )->orderBy($sort_by,
                 'desc')->get()
             : Event::with(['organiser','images', 'currency'])->orderBy($sort_by, 'asc')->get();
-        if($category){
-            dd($events);
-            // $events = $events->filter(function($event) use($category){
-            //     $cats = explode(',',$event->event_category);
-            //     return in_array($category, $cats);
-            // });
-        }
         $listEvent=[];
        
         $image ='';
