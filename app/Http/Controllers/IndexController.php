@@ -34,14 +34,14 @@ class IndexController extends Controller
                 'desc')->get()
             : Event::with(['organiser','images', 'currency'])->orderBy($sort_by, 'asc')->get();
         if($category){
-            dump($events);
+            // dump($events);
             $events = $events->filter(function($event) use($category){
                 $cats = explode(',',$event->event_category);
-                dump($event->event_category);
-                dump($cats);
+                // dump($event->event_category);
+                // dump($cats);
                 return in_array($category, $cats);
             });
-            dd($events);
+            // dd($events);
         }
         $listEvent=[];
        
