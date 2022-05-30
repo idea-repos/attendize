@@ -696,7 +696,7 @@ Route::group(
 
     Route::get('/events/{category}',
         [IndexController::class, 'eventlist']
-    )->name('events');
+    )->name('events.filtered');
 
 
     Route::get('/connect',
