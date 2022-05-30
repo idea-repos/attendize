@@ -171,7 +171,7 @@
         </div>
         <div class="copy-right3">
             <!-- made with <img src="images/heart.png" /> By studio Snow Show -->
-            <img src="{{ url('/') }}/images/cb2.svg">
+            <img src="/images/cb2.svg">
         </div>
     </div>
 </div>

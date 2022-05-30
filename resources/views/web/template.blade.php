@@ -119,7 +119,7 @@
 <script src="{{ url('/') }}/js/ScrollTrigger.min.js?v=3.3"></script>
 <script src="{{ url('/') }}/js/custom.js"></script>
 
-<script src="js/events/less.js" type="text/javascript"></script>
+<script src="/js/events/less.js" type="text/javascript"></script>
 <!--<![endif]-->
 
 <script src="{{ url('/') }}/js/events/prism.js" type="text/javascript"></script>
