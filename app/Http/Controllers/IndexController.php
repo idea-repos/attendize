@@ -41,7 +41,7 @@ class IndexController extends Controller
                 // dump($cats);
                 return in_array($category, $cats);
             });
-            dd($events);
+            //dd($events);
         }
         $listEvent=[];
        
@@ -66,7 +66,7 @@ class IndexController extends Controller
             $myevent['id'] = $value->id;
             $listEvent[] = $myevent;
         }
-        //dd(json_encode($listEvent));
+        dd(json_encode($listEvent));
         $data = [
             'events'    => $events,
             'listEvent' =>json_encode($listEvent),
