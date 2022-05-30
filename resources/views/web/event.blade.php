@@ -79,15 +79,19 @@
         </div>
     </div>
 </div>
-<div class="row">
+<div class="inthn">
     @php
         $categories = App\Models\EventCategory::all();
     @endphp
-    <ul>
-        @foreach ($categories as $cat)
-            <li><a href="/events/{{$cat->id}}">{{$cat->title}}</a></li>    
-        @endforeach        
-    </ul>
+    @if ($categories)
+        <h3>Categories</h3>
+        <ul>
+            @foreach ($categories as $cat)
+                <li><a href="/events/{{$cat->id}}">{{$cat->title}}</a></li>    
+            @endforeach        
+        </ul> 
+    @endif
+    
 </div>
 <div class="ev-footer-menu">
     <ul>
