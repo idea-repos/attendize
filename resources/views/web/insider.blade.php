@@ -18,7 +18,7 @@ body{
 
 <div class="event-spacer"></div>
 
-<div class="community-outer">
+<div class="community-outer community-outer-new1">
     <div class="wrapper">
         <div class="community-inner community-inner1">
             <div class="community-left">
@@ -49,7 +49,7 @@ body{
                         <textarea></textarea>
                         </div>
                         <div class="form-field-submit">
-                            <button type="submit"><img src="images/submit-form.png"></button>
+                            <button type="submit"><img src="images/contact-submit1.svg" style="width:70px"></button>
                         </div>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ body{
 
 
 
-<div class="community-outer">
+<div class="community-outer community-outer-new2">
     <div class="wrapper">
         <div class="community-inner">
             <div class="community-left">

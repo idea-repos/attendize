@@ -63,7 +63,7 @@
                                     <input type="text" class="required" id="subsribeinput" name="subscribe" placeholder="TYPE YOUR EMAIL HERE">
                                 </div>
                                 <div class="submitbtn">
-                                    <button type="button" id='subscribedbtn'><img src="{{ url('/') }}/images/submit-btn1.png"></button>
+                                    <button type="button" id='subscribedbtn'><img src="{{ url('/') }}/images/footer-sc1.svg" class="footer-sc1"></button>
                                 </div>
                             </div>
                         </form>
@@ -73,7 +73,7 @@
                             Global Avenue 2,Mehrauli-<br />Gurgaon Rd, Aya Nagar,<br /> New Delhi, Delhi 110047
                         </div>
                         <div class="address-right">
-                            <a href="javascript:;"><img src="{{ url('/') }}/images/address-link.png"></a>
+                            <a href="javascript:;"><img src="{{ url('/') }}/images/footer-sc2.svg" class="footer-sc1"></a>
                         </div>
                     </div>
                 </div>

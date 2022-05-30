@@ -2064,20 +2064,20 @@ footer{
     right: 0;
     height:30px;
     font-size: 0;
-    background: url(../images/nx.png) no-repeat top 10px center !important;
+    background: url(../images/nxt-arrow.svg) no-repeat top 10px center !important;
 }
 #mini-clndr .clndr .controls .clndr-next-button:hover{
-    background: url(../images/nx.png) no-repeat top 10px center !important;
+    background: url(../images/nxt-arrow.svg) no-repeat top 10px center !important;
 }
 #mini-clndr .clndr .controls .clndr-previous-button{
     position: absolute;
     right: 46px;
     height:30px;
     font-size: 0;
-    background: url(../images/pv.png) no-repeat top 10px center !important;
+    background: url(../images/prv-arrow.svg) no-repeat top 10px center !important;
 }
 #mini-clndr .clndr .controls .clndr-previous-button:hover{
-    background: url(../images/pv.png) no-repeat top 10px center !important;
+    background: url(../images/prv-arrow.svg) no-repeat top 10px center !important;
 }
 
 #cdlr{
@@ -2496,3 +2496,9 @@ footer{
 }
 
 .ticket_download_link{}
+
+/*.community-outer-new2{
+	display:none;
+}*/
+
+.footer-sc1{width:64px;}

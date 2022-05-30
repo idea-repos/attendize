@@ -18,13 +18,11 @@
     <div class="inner-wrapper">
         <div class="bktoevent"><a href="{{route('events')}}"><img src="{{ url('/') }}/images/calander-arrow.svg">CALENDAR</a></div>
         <div class="event-details-hd">
-            Rishab Rikhiram Sharma
+            {{ $event->my_organiser_name }}
             <span>{{$event->title}} </span>
             {{-- @dump($event->categories()->pluck('title')->toArray()) --}}
-            @if ($event->categories())
-                Category -
-                <span>{{implode(',',$event->categories()->pluck('title')->toArray())}} </span>    
-            @endif
+           
+           
             
         </div>
         <div class="event-details-date">
@@ -65,9 +63,8 @@
                 </div>
                 <div class="event-details-section1-inner-right">
                 <div class="event-details-social-left">
-                    <h5>SITAR FOR MENTAL HEALTH</h5>
-                <p>Rishab Rikhiram Sharma, Sitar<br>
-                    Lorem ipsum, Tabla</p>
+                    <h5>{{ $event->my_organiser_name }} </h5>
+                <p>{{ $event->my_organiser_about }} </p>
                 </div>
                 <div class="event-details-social-right">
                   <ul>

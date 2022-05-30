@@ -1,4 +1,10 @@
 $(function () {
+	
+		var Div1Height = $('.community-outer-new1').height();
+	console.log(Div1Height)	
+	
+	
+	
     $('.signup-left .owl-carousel').owlCarousel({
         loop: true,
         responsiveClass: true,
@@ -132,5 +138,16 @@ $(document).ready(function(){
 	function () {
 		$('.home-cat-main').removeAttr( "style" )
 	});
+
+
+
+	
+/*$(window).scroll(function(){
+
+	
+	
+});*/
+	
+	
 
 })

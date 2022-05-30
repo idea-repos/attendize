@@ -71,7 +71,7 @@
                 @foreach ($news as $single)
                     <div class="new-ev-inner">
                         <h4>{{$single->title}}</h4>
-                        <p>{{$single->descrption}}...<a href="{{$single->url}}">Read More</a></p>
+                        <p>{{$single->descrption}}...<a target="_blank" href="{{$single->url}}">Read More</a></p>
                     </div>
                 @endforeach
             @endif

@@ -140,7 +140,7 @@
  <div class="addto-cart-event-details">
           <div class="ada">
               <h5>Date</h5>
-              <p>3 January</p>
+              <p> {{ $event->startDateFormatted() }}</p>
           </div>
           <div class="ada">
             <h5>Time</h5>
@@ -152,11 +152,11 @@
         </div>
         <div class="ada">
             <h5>Venue</h5>
-            <p>Studio</p>
+            <p> {{ $event->venue_name }}</p>
         </div>
         <div class="ada">
             <h5>Event type</h5>
-            <p>Live Concert<br>
+            <p>{{implode('</br>',$event->categories()->pluck('title')->toArray())}}
                 Guided Meditation</p>
         </div>
         <div class="ada">
@@ -166,12 +166,9 @@
         </div>
         <div class="ada">
             <h5>Age Group</h5>
-            <p>10+</p>
+            <p> {{ $event->age_group }}</p>
         </div>
-        <div class="ada">
-            <h5>Age Group</h5>
-            <p>10+</p>
-        </div>
+        
       </div>
 
 
