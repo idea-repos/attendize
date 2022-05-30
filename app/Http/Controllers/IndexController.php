@@ -35,7 +35,7 @@ class IndexController extends Controller
             : Event::with(['organiser','images', 'currency'])->orderBy($sort_by, 'asc')->get();
         if($category){
             $events = $events->filter(function($event) use($category){
-                $cats = explode(',',$event->category_id);
+                $cats = explode(',',$event->event_category);
                 return in_array($category, $cats);
             });
         }
