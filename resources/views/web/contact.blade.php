@@ -31,7 +31,7 @@ body{
             <div class="community-right">
                 <h1><span>Join</span> the<br> community!</h1>
                 <p>Reach out if you want to collaborate with us, or simply have a chat.</p>
-                <form>
+                <form method="post" action="{{route('mail.post')}}">
                     <div class="community-form">
                     <div class="form_field">
                         <div class="main_form_field">

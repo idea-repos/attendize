@@ -104,4 +104,8 @@ class IndexController extends Controller
         dd($request);
     }
 
+    function postmail(Request $request){
+        dd($request);
+    }
+
 }

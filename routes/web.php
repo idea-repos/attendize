@@ -702,6 +702,9 @@ Route::group(
     Route::get('/connect',
         [IndexController::class, 'contact']
     )->name('connect');
+    Route::post('/contactus',
+        [IndexController::class, 'postmail']
+    )->name('mail.post');
 
     Route::get('/insider',
         [IndexController::class, 'insider']
