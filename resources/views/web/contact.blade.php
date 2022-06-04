@@ -36,13 +36,13 @@ body{
                     <div class="community-form">
                     <div class="form_field">
                         <div class="main_form_field">
-                            <input type="text" nmae="name" required placeholder="NAME">
+                            <input type="text" name ="name" required placeholder="NAME">
                         </div>
                         <div class="main_form_field">
-                            <input type="email" nmae="email" required placeholder="EMAIL">
+                            <input type="email" name="email" required placeholder="EMAIL">
                         </div>
                         <div class="main_form_field">
-                            <input type="tel" nmae="phone" required placeholder="PHONE">
+                            <input type="tel" name="phone)number" required placeholder="PHONE">
                         </div>
                     </div>
                     <div class="form_field">

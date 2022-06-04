@@ -1,9 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Mail\ContactusMail;
 use App\Models\Event;
 use App\Models\Organiser;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class IndexController extends Controller
 {
@@ -105,7 +108,11 @@ class IndexController extends Controller
     }
 
     function postmail(Request $request){
-        dd($request);
+        // dd();
+        $postedData = $request->all();
+
+        Mail::to()->send(new ContactusMail($request->name, $request->email, $request->phone_number, $request->msg));
+
     }
 
 }
