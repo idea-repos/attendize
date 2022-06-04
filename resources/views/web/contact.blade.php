@@ -32,22 +32,23 @@ body{
                 <h1><span>Join</span> the<br> community!</h1>
                 <p>Reach out if you want to collaborate with us, or simply have a chat.</p>
                 <form method="post" action="{{route('mail.post')}}">
+                    @csrf
                     <div class="community-form">
                     <div class="form_field">
                         <div class="main_form_field">
-                            <input type="text" nmae="fname" placeholder="NAME">
+                            <input type="text" nmae="name" required placeholder="NAME">
                         </div>
                         <div class="main_form_field">
-                            <input type="email" nmae="fname" placeholder="EMAIL">
+                            <input type="email" nmae="email" required placeholder="EMAIL">
                         </div>
                         <div class="main_form_field">
-                            <input type="tel" nmae="fname" placeholder="PHONE">
+                            <input type="tel" nmae="phone" required placeholder="PHONE">
                         </div>
                     </div>
                     <div class="form_field">
                         <h4>MESSAGE</h4>
                         <div class="main_form_field main_form_field_teaxtarea">
-                        <textarea></textarea>
+                        <textarea name="msg" required></textarea>
                         </div>
                         <div class="form-field-submit">
                             <button type="submit"><img src="{{ url('/') }}/images/submit-form.png"></button>
