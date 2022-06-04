@@ -112,7 +112,7 @@ class IndexController extends Controller
         $postedData = $request->all();
 
         Mail::to(env('ADMIN_EMAIL'))->send(new ContactusMail($request->name, $request->email, $request->phone_number, $request->msg));
-
+        return response()->back()->with('success',"Mail Has Been Sent Successfully.");
 
     }
 
