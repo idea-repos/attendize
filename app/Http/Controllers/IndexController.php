@@ -111,7 +111,8 @@ class IndexController extends Controller
         // dd();
         $postedData = $request->all();
 
-        Mail::to("er.amandeep04@gmail.com")->send(new ContactusMail($request->name, $request->email, $request->phone_number, $request->msg));
+        Mail::to(env('ADMIN_EMAIL'))->send(new ContactusMail($request->name, $request->email, $request->phone_number, $request->msg));
+
 
     }
 
